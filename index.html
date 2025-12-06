@@ -1,0 +1,1322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReelRascals | Reels as a Service for Restaurants, Bars & Resorts</title>
+    <meta name="description" content="ReelRascals: Reels As A Service for Bangalore businesses. We create scroll-stopping content for restaurants, bars, resorts & real estate. Book now!">
+    
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "ReelRascals",
+        "url": "https://reelrascals.in",
+        "logo": "https://reelrascals.in/logo.png",
+        "description": "Reels As A Service for local businesses in Bangalore. We create scroll-stopping video content for restaurants, bars, resorts and real estate.",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Bangalore",
+            "addressRegion": "Karnataka",
+            "addressCountry": "India"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+91-8897977808",
+            "contactType": "Customer Service",
+            "areaServed": "IN",
+            "availableLanguage": "English"
+        },
+        "sameAs": [
+            "https://instagram.com/reelrascals.in",
+            "https://www.youtube.com/@reelrascals_in"
+        ]
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "Reels As A Service",
+        "provider": {
+            "@type": "Organization",
+            "name": "ReelRascals"
+        },
+        "description": "Professional on-location Reels production for restaurants, bars, resorts, and real estate in Bangalore. We handle everything from shooting to editing to posting.",
+        "areaServed": {
+            "@type": "City",
+            "name": "Bangalore"
+        },
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Digital Marketing Services",
+            "itemListElement": [
+                {
+                    "@type": "Service",
+                    "name": "Reels As A Service",
+                    "description": "Complete Reels production and management service"
+                },
+                {
+                    "@type": "Service",
+                    "name": "Social Media Handling",
+                    "description": "Complete management of Instagram and YouTube"
+                },
+                {
+                    "@type": "Service",
+                    "name": "Local SEO",
+                    "description": "Boost visibility in local searches and Google Maps"
+                }
+            ]
+        }
+    }
+    </script>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Fonts - Montserrat and JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Animate.css for animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    
+    <style>
+        /* Custom Styles */
+        :root {
+            --primary-amber: #f59e0b;
+            --primary-pink: #ec4899;
+            --primary-purple: #8b5cf6;
+            --dark-bg: #0a0a0a;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--dark-bg);
+            color: #f3f4f6;
+            overflow-x: hidden;
+        }
+        
+        .font-heading {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+        
+        .font-body {
+            font-family: 'JetBrains Mono', monospace;
+        }
+        
+        .font-funky {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(90deg, var(--primary-amber), var(--primary-pink));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            display: inline-block;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(90deg, var(--primary-amber), var(--primary-pink));
+        }
+        
+        .glass-card {
+            background: rgba(15, 15, 15, 0.85);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 1.5rem;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        /* Particle Background */
+        .particles-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -3;
+            overflow: hidden;
+        }
+        
+        .particle {
+            position: absolute;
+            border-radius: 50%;
+            background: linear-gradient(45deg, var(--primary-amber), var(--primary-pink));
+            animation: particle-float 15s infinite linear;
+        }
+        
+        @keyframes particle-float {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.3;
+            }
+            90% {
+                opacity: 0.3;
+            }
+            100% {
+                transform: translateY(-100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+        
+        /* Dynamic Grid Background */
+        .grid-bg {
+            background-image: 
+                linear-gradient(rgba(245, 158, 11, 0.08) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(236, 72, 153, 0.08) 1px, transparent 1px);
+            background-size: 50px 50px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 200%;
+            height: 200%;
+            z-index: -2;
+            animation: gridMove 30s linear infinite;
+            transform-origin: center;
+        }
+        
+        @keyframes gridMove {
+            0% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+            25% {
+                transform: translate(-25px, 25px) rotate(0.5deg);
+            }
+            50% {
+                transform: translate(0, 50px) rotate(0deg);
+            }
+            75% {
+                transform: translate(25px, 25px) rotate(-0.5deg);
+            }
+            100% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+        }
+        
+        .grid-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(245, 158, 11, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(236, 72, 153, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 40% 80%, rgba(168, 85, 247, 0.05) 0%, transparent 50%);
+            z-index: -1;
+        }
+        
+        /* Floating Elements */
+        @keyframes float-x {
+            0%, 100% {
+                transform: translateX(0) translateY(0);
+            }
+            50% {
+                transform: translateX(20px) translateY(-20px);
+            }
+        }
+        
+        @keyframes float-y {
+            0%, 100% {
+                transform: translateY(0) scale(1);
+            }
+            50% {
+                transform: translateY(-20px) scale(1.05);
+            }
+        }
+        
+        .float-x {
+            animation: float-x 15s ease-in-out infinite;
+        }
+        
+        .float-y {
+            animation: float-y 10s ease-in-out infinite;
+        }
+        
+        /* Glow Effects */
+        @keyframes pulse-glow {
+            0%, 100% {
+                box-shadow: 
+                    0 0 20px rgba(236, 72, 153, 0.3),
+                    0 0 40px rgba(245, 158, 11, 0.2),
+                    inset 0 0 20px rgba(255, 255, 255, 0.1);
+            }
+            50% {
+                box-shadow: 
+                    0 0 40px rgba(236, 72, 153, 0.6),
+                    0 0 80px rgba(245, 158, 11, 0.4),
+                    inset 0 0 40px rgba(255, 255, 255, 0.2);
+            }
+        }
+        
+        .pulse-glow {
+            animation: pulse-glow 3s ease-in-out infinite;
+        }
+        
+        /* Text Effects */
+        .text-shine {
+            background: linear-gradient(90deg, 
+                #fff 0%, 
+                var(--primary-amber) 25%, 
+                var(--primary-pink) 50%, 
+                var(--primary-amber) 75%, 
+                #fff 100%);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: shine 8s linear infinite;
+        }
+        
+        @keyframes shine {
+            to {
+                background-position: 200% center;
+            }
+        }
+        
+        /* Hover Effects */
+        .hover-lift {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        
+        .hover-lift:hover {
+            transform: translateY(-10px);
+            box-shadow: 
+                0 25px 50px -12px rgba(0, 0, 0, 0.5),
+                0 0 40px rgba(236, 72, 153, 0.4);
+        }
+        
+        /* Scroll Animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(40px) scale(0.95);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+        
+        /* Button Pulse */
+        @keyframes button-pulse {
+            0%, 100% {
+                box-shadow: 
+                    0 0 0 0 rgba(236, 72, 153, 0.4),
+                    0 0 0 0 rgba(245, 158, 11, 0.4);
+            }
+            50% {
+                box-shadow: 
+                    0 0 0 15px rgba(236, 72, 153, 0),
+                    0 0 0 30px rgba(245, 158, 11, 0);
+            }
+        }
+        
+        .button-pulse {
+            animation: button-pulse 3s infinite;
+        }
+        
+        /* Reel Spinning */
+        @keyframes reel-spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        
+        .reel-spin {
+            animation: reel-spin 4s linear infinite;
+        }
+        
+        /* WhatsApp Button */
+        .whatsapp-button {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s ease;
+        }
+        
+        .whatsapp-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 15px 40px rgba(37, 211, 102, 0.6);
+        }
+        
+        .whatsapp-button i {
+            font-size: 36px;
+            color: white;
+        }
+        
+        .whatsapp-tooltip {
+            position: absolute;
+            right: 80px;
+            background: rgba(0, 0, 0, 0.9);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 10px;
+            font-size: 14px;
+            white-space: nowrap;
+            opacity: 0;
+            transform: translateX(20px);
+            transition: all 0.3s ease;
+            pointer-events: none;
+            border: 1px solid rgba(37, 211, 102, 0.3);
+        }
+        
+        .whatsapp-button:hover .whatsapp-tooltip {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        /* Mobile Responsive Adjustments */
+        @media (max-width: 768px) {
+            .font-heading {
+                font-size: 1.8rem !important;
+            }
+            
+            .whatsapp-button {
+                width: 60px;
+                height: 60px;
+                bottom: 20px;
+                right: 20px;
+            }
+            
+            .whatsapp-button i {
+                font-size: 30px;
+            }
+            
+            .whatsapp-tooltip {
+                font-size: 12px;
+                padding: 8px 12px;
+                right: 70px;
+            }
+        }
+        
+        @media (max-width: 640px) {
+            .whatsapp-tooltip {
+                display: none;
+            }
+        }
+        
+        /* ReelRascals Static Logo Styles */
+        .rr-logo {
+            position: relative;
+        }
+
+        .rr-phone {
+            position: relative;
+            background: linear-gradient(to bottom, #1a1a1a, #000);
+            border-radius: 20px;
+            border: 2px solid rgba(245, 158, 11, 0.5);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .rr-screen {
+            background: linear-gradient(to bottom right, #0a0a0a, #000);
+            border-radius: 15px;
+            border: 1px solid rgba(245, 158, 11, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .rr-reel {
+            position: relative;
+        }
+
+        .rr-ring {
+            position: absolute;
+            border-radius: 50%;
+            border: 2px solid transparent;
+        }
+
+        .rr-center-circle {
+            background: linear-gradient(to right, #f59e0b, #ec4899);
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 10px rgba(236, 72, 153, 0.5);
+        }
+
+        .rr-center-circle svg {
+            fill: white;
+        }
+
+        /* Logo sizes for different sections */
+        .logo-nav {
+            width: 50px;
+            height: 60px;
+        }
+        
+        .logo-nav .rr-phone {
+            width: 40px;
+            height: 50px;
+            border-radius: 10px;
+        }
+        
+        .logo-nav .rr-screen {
+            width: 32px;
+            height: 40px;
+            border-radius: 8px;
+        }
+        
+        .logo-nav .rr-reel {
+            width: 24px;
+            height: 24px;
+        }
+        
+        .logo-nav .rr-ring {
+            inset: 0;
+        }
+        
+        .logo-nav .ring1 {
+            border-color: rgba(168, 85, 247, 0.6);
+        }
+        
+        .logo-nav .ring2 {
+            inset: 4px;
+            border-color: rgba(236, 72, 153, 0.6);
+        }
+        
+        .logo-nav .ring3 {
+            inset: 8px;
+            border-color: rgba(245, 158, 11, 0.6);
+        }
+        
+        .logo-nav .rr-center-circle {
+            width: 12px;
+            height: 12px;
+        }
+        
+        .logo-nav .rr-center-circle svg {
+            width: 6px;
+            height: 6px;
+        }
+        
+        .logo-footer {
+            width: 70px;
+            height: 85px;
+        }
+        
+        .logo-footer .rr-phone {
+            width: 60px;
+            height: 75px;
+            border-radius: 15px;
+        }
+        
+        .logo-footer .rr-screen {
+            width: 48px;
+            height: 60px;
+            border-radius: 12px;
+        }
+        
+        .logo-footer .rr-reel {
+            width: 36px;
+            height: 36px;
+        }
+        
+        .logo-footer .rr-ring {
+            inset: 0;
+        }
+        
+        .logo-footer .ring1 {
+            border-color: rgba(168, 85, 247, 0.6);
+        }
+        
+        .logo-footer .ring2 {
+            inset: 6px;
+            border-color: rgba(236, 72, 153, 0.6);
+        }
+        
+        .logo-footer .ring3 {
+            inset: 12px;
+            border-color: rgba(245, 158, 11, 0.6);
+        }
+        
+        .logo-footer .rr-center-circle {
+            width: 18px;
+            height: 18px;
+        }
+        
+        .logo-footer .rr-center-circle svg {
+            width: 10px;
+            height: 10px;
+        }
+    </style>
+</head>
+<body class="relative overflow-x-hidden">
+    
+    <!-- Particle Background -->
+    <div class="particles-bg" id="particles"></div>
+    
+    <!-- Animated Grid Background -->
+    <div class="grid-bg"></div>
+    <div class="grid-overlay"></div>
+    
+    <!-- Floating Background Elements -->
+    <div class="fixed top-1/4 left-1/4 w-32 h-32 rounded-full bg-gradient-to-br from-amber-500/10 to-pink-500/10 blur-3xl float-x z-0"></div>
+    <div class="fixed top-1/3 right-1/4 w-40 h-40 rounded-full bg-gradient-to-tr from-amber-500/5 to-pink-500/5 blur-3xl float-y z-0"></div>
+    
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/918897977808" target="_blank" class="whatsapp-button">
+        <i class="fab fa-whatsapp"></i>
+        <div class="whatsapp-tooltip">WhatsApp: 8897977808</div>
+    </a>
+    
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 py-5 px-6 md:px-12 bg-black/90 backdrop-blur-xl border-b border-gray-800/30">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <!-- Logo -->
+            <div class="flex items-center space-x-4 group cursor-pointer">
+                <div class="rr-logo logo-nav">
+                    <!-- Phone body -->
+                    <div class="rr-phone">
+                        <div class="rr-screen">
+                            <!-- Reel graphic -->
+                            <div class="rr-reel">
+                                <div class="rr-ring ring1"></div>
+                                <div class="rr-ring ring2"></div>
+                                <div class="rr-ring ring3"></div>
+                                <!-- Center play icon -->
+                                <div class="rr-center-circle">
+                                    <svg viewBox="0 0 24 24" fill="white">
+                                        <path d="M8 5v14l11-7z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h1 class="font-heading text-3xl font-black text-white tracking-tighter">
+                        Reel<span class="gradient-text">Rascals</span>
+                    </h1>
+                    <p class="font-body text-xs text-amber-400 -mt-1">
+                        Reels As A <span class="text-pink-400">Service</span>
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-10 items-center">
+                <a href="#services" class="font-body text-gray-300 hover:text-amber-400 transition-all duration-300 hover:scale-105 font-medium hover:underline hover:underline-offset-4">Services</a>
+                <a href="#process" class="font-body text-gray-300 hover:text-pink-400 transition-all duration-300 hover:scale-105 font-medium hover:underline hover:underline-offset-4">Process</a>
+                <a href="#contact" class="font-funky px-8 py-3 gradient-bg rounded-full text-white font-bold hover:shadow-2xl hover:scale-105 transition-all duration-300 button-pulse">
+                    Get Started
+                </a>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-amber-400 transition">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden absolute top-full left-0 w-full bg-gray-900/95 backdrop-blur-xl py-6 px-6 border-t border-gray-800">
+            <div class="flex flex-col space-y-6">
+                <a href="#services" class="font-body text-gray-300 hover:text-amber-400 transition py-2 text-lg font-medium">Services</a>
+                <a href="#process" class="font-body text-gray-300 hover:text-amber-400 transition py-2 text-lg font-medium">Process</a>
+                <a href="#contact" class="font-funky px-6 py-4 gradient-bg rounded-full text-white font-bold text-center text-lg mt-4 hover:shadow-xl button-pulse">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-48 pb-32 px-6 md:px-12 relative overflow-hidden">
+        <!-- Hero Background Elements -->
+        <div class="absolute top-0 left-0 w-full h-full z-0">
+            <div class="absolute top-20 right-1/4 w-64 h-64 rounded-full bg-gradient-to-r from-amber-500/5 to-pink-500/5 blur-3xl"></div>
+            <div class="absolute bottom-20 left-1/4 w-96 h-96 rounded-full bg-gradient-to-l from-purple-500/3 to-amber-500/3 blur-3xl"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="grid lg:grid-cols-2 gap-20 items-center">
+                <!-- Left Column -->
+                <div class="fade-in">
+                    <div class="inline-block px-6 py-3 rounded-full bg-gradient-to-r from-amber-500/10 to-pink-500/10 border border-amber-500/30 mb-10">
+                        <span class="font-body text-amber-400">
+                            No Stock Footage. Just Your <span class="text-pink-400">Story</span>.
+                        </span>
+                    </div>
+                    
+                    <h1 class="font-heading text-6xl md:text-8xl text-white leading-tight mb-10">
+                        <span class="font-heading text-shine block text-5xl md:text-6xl mb-4">We Handle Your</span>
+                        <span class="gradient-text block mb-4">Visibility.</span>
+                        <span class="font-body block text-4xl md:text-5xl text-gray-300 mt-6">
+                            We Shoot. <span class="text-amber-400">We Edit.</span><br>
+                            We Make You 
+                            <span class="text-pink-400">Scroll-Stopping</span>.
+                        </span>
+                    </h1>
+                    
+                    <p class="font-body text-xl text-gray-300 mb-12 max-w-2xl leading-relaxed">
+                        Professional <span class="font-funky text-amber-400">Reels As A Service</span> for Bangalore restaurants, bars, resorts, and real estate. We handle everything from concept to posting, keeping your social media alive with authentic, engaging content.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-6">
+                        <a href="#contact" class="font-funky px-12 py-6 gradient-bg rounded-full text-white font-bold text-xl flex items-center justify-center space-x-4 hover:shadow-2xl hover:scale-105 transition-all duration-300 button-pulse">
+                            <span>Book Your First Shoot</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="#process" class="font-body px-12 py-6 rounded-full border-2 border-gray-700 text-white font-bold text-xl flex items-center justify-center space-x-4 hover:bg-gray-800/50 hover:scale-105 transition-all duration-300 hover:border-pink-500/50">
+                            <span>See How It Works</span>
+                        </a>
+                    </div>
+                    
+                    <!-- Client Types - Updated to be more general -->
+                    <div class="mt-20 fade-in">
+                        <p class="font-body text-gray-400 mb-8 text-lg uppercase tracking-widest">SERVING BANGALORE BUSINESSES:</p>
+                        <div class="flex flex-wrap gap-4">
+                            <span class="font-body px-6 py-4 bg-gray-900/70 rounded-full text-gray-300 hover:bg-amber-500/20 hover:text-amber-400 transition-all duration-300 hover:scale-105 cursor-pointer">Restaurants & Cafes</span>
+                            <span class="font-body px-6 py-4 bg-gray-900/70 rounded-full text-gray-300 hover:bg-amber-500/20 hover:text-amber-400 transition-all duration-300 hover:scale-105 cursor-pointer">Bars & Lounges</span>
+                            <span class="font-body px-6 py-4 bg-gray-900/70 rounded-full text-gray-300 hover:bg-pink-500/20 hover:text-pink-400 transition-all duration-300 hover:scale-105 cursor-pointer">Hotels & Resorts</span>
+                            <span class="font-body px-6 py-4 bg-gray-900/70 rounded-full text-gray-300 hover:bg-pink-500/20 hover:text-pink-400 transition-all duration-300 hover:scale-105 cursor-pointer">Retail Stores</span>
+                            <span class="font-body px-6 py-4 bg-gray-900/70 rounded-full text-gray-300 hover:bg-purple-500/20 hover:text-purple-400 transition-all duration-300 hover:scale-105 cursor-pointer">Gyms & Studios</span>
+                            <span class="font-body px-6 py-4 bg-gray-900/70 rounded-full text-gray-300 hover:bg-amber-500/20 hover:text-amber-400 transition-all duration-300 hover:scale-105 cursor-pointer">Real Estate</span>
+                            <span class="font-body px-6 py-4 bg-gray-900/70 rounded-full text-gray-300 hover:bg-pink-500/20 hover:text-pink-400 transition-all duration-300 hover:scale-105 cursor-pointer">Event Venues</span>
+                            <span class="font-body px-6 py-4 bg-gray-900/70 rounded-full text-gray-300 hover:bg-purple-500/20 hover:text-purple-400 transition-all duration-300 hover:scale-105 cursor-pointer">Local Services</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Column - Logo and Clean Visual -->
+                <div class="relative fade-in">
+                    <!-- Large Logo Display -->
+                    <div class="flex justify-center mb-12">
+                        <div class="rr-logo" style="width: 250px; height: 310px;">
+                            <div class="rr-phone" style="width: 210px; height: 280px; border-radius: 40px;">
+                                <div class="rr-screen" style="width: 180px; height: 240px; border-radius: 35px;">
+                                    <!-- Reel graphic -->
+                                    <div class="rr-reel" style="width: 140px; height: 140px;">
+                                        <div class="rr-ring ring1" style="border: 6px solid rgba(168, 85, 247, 0.6);"></div>
+                                        <div class="rr-ring ring2" style="inset: 16px; border: 6px solid rgba(236, 72, 153, 0.6);"></div>
+                                        <div class="rr-ring ring3" style="inset: 32px; border: 6px solid rgba(245, 158, 11, 0.6);"></div>
+                                        <!-- Center play icon -->
+                                        <div class="rr-center-circle" style="width: 75px; height: 75px;">
+                                            <svg width="35" height="35" viewBox="0 0 24 24" fill="white">
+                                                <path d="M8 5v14l11-7z"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Animated Stats -->
+                    <div class="glass-card p-8 rounded-3xl hover-lift mb-10">
+                        <div class="grid grid-cols-3 gap-6">
+                            <div class="p-6 text-center hover-lift hover:border-amber-500/30 transition-all duration-300">
+                                <h4 class="font-heading text-4xl text-amber-400 mb-3">10+</h4>
+                                <p class="font-body text-gray-400 text-sm">Reels/Month</p>
+                            </div>
+                            <div class="p-6 text-center hover-lift hover:border-pink-500/30 transition-all duration-300">
+                                <h4 class="font-heading text-4xl text-pink-400 mb-3">24-48h</h4>
+                                <p class="font-body text-gray-400 text-sm">Turnaround</p>
+                            </div>
+                            <div class="p-6 text-center hover-lift hover:border-purple-500/30 transition-all duration-300">
+                                <h4 class="font-heading text-4xl text-white mb-3">100%</h4>
+                                <p class="font-body text-gray-400 text-sm">On-Location</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Simple Preview Card -->
+                    <div class="glass-card p-6 rounded-3xl hover-lift">
+                        <div class="aspect-video bg-gradient-to-br from-gray-900 to-black rounded-2xl flex items-center justify-center relative overflow-hidden">
+                            <!-- Animated Reel Elements -->
+                            <div class="absolute inset-0">
+                                <div class="absolute top-1/4 left-1/4 w-32 h-32 rounded-full border-4 border-amber-500/20 reel-spin"></div>
+                                <div class="absolute bottom-1/4 right-1/4 w-24 h-24 rounded-full border-4 border-pink-500/20 reel-spin" style="animation-duration: 3s;"></div>
+                            </div>
+                            
+                            <!-- Simple Preview Content -->
+                            <div class="relative z-10 text-center p-8">
+                                <div class="w-32 h-32 relative mx-auto mb-8">
+                                    <div class="absolute inset-0 rounded-full border-8 border-amber-500/20 reel-spin"></div>
+                                    <div class="absolute inset-8 rounded-full border-8 border-pink-500/20 reel-spin" style="animation-direction: reverse;"></div>
+                                    <div class="absolute inset-0 flex items-center justify-center">
+                                        <div class="w-20 h-20 rounded-full bg-gradient-to-r from-amber-500 to-pink-500 flex items-center justify-center pulse-glow">
+                                            <i class="fas fa-play text-white text-2xl ml-1"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h3 class="font-heading text-2xl text-white mb-2">Your Brand Story</h3>
+                                <p class="font-body text-gray-400">We showcase what makes your business unique</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-32 px-6 md:px-12 relative overflow-hidden">
+        <!-- Background Elements -->
+        <div class="absolute inset-0 z-0">
+            <div class="absolute top-1/3 left-10 w-64 h-64 rounded-full bg-gradient-to-r from-amber-500/5 to-transparent blur-3xl"></div>
+            <div class="absolute bottom-1/3 right-10 w-96 h-96 rounded-full bg-gradient-to-l from-pink-500/5 to-transparent blur-3xl"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto relative z-10">
+            <!-- Section Header -->
+            <div class="text-center mb-24 fade-in">
+                <h2 class="font-heading text-6xl md:text-8xl text-white mb-10">
+                    More Than Just <span class="gradient-text text-shine">Reels</span>
+                </h2>
+                <p class="font-body text-2xl text-gray-400 max-w-3xl mx-auto">
+                    We provide a complete <span class="font-funky text-amber-400">Reels As A Service</span> ecosystem for your Bangalore business.
+                </p>
+                <div class="w-64 h-1 gradient-bg mx-auto mt-12 rounded-full"></div>
+            </div>
+            
+            <!-- Main Service -->
+            <div class="glass-card p-12 mb-20 hover-lift border border-amber-500/20 fade-in">
+                <div class="flex flex-col md:flex-row md:items-center mb-14">
+                    <div class="w-24 h-24 rounded-full gradient-bg flex items-center justify-center mr-8 mb-8 md:mb-0 pulse-glow">
+                        <i class="fas fa-video text-white text-4xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-heading text-5xl text-white">Reels As A Service (RaaS)</h3>
+                        <p class="font-body text-gray-400 text-2xl mt-4">Our flagship <span class="text-amber-400">Reels As A Service</span> offering for Bangalore businesses</p>
+                    </div>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-10 mt-14">
+                    <div class="p-8 bg-gray-900/50 rounded-2xl hover-lift hover:border-amber-500/30 transition-all duration-300">
+                        <div class="w-20 h-20 rounded-full bg-amber-500/20 flex items-center justify-center mb-8">
+                            <i class="fas fa-map-marker-alt text-amber-400 text-3xl"></i>
+                        </div>
+                        <h4 class="font-heading text-3xl text-white mb-6">On-Location Production</h4>
+                        <p class="font-body text-gray-400">We come to your Bangalore venue with professional equipment to capture authentic content.</p>
+                    </div>
+                    
+                    <div class="p-8 bg-gray-900/50 rounded-2xl hover-lift hover:border-pink-500/30 transition-all duration-300">
+                        <div class="w-20 h-20 rounded-full bg-pink-500/20 flex items-center justify-center mb-8">
+                            <i class="fas fa-edit text-pink-400 text-3xl"></i>
+                        </div>
+                        <h4 class="font-heading text-3xl text-white mb-6">Professional Editing</h4>
+                        <p class="font-body text-gray-400">Trend-aware editing with transitions, text overlays, and effects that perform.</p>
+                    </div>
+                    
+                    <div class="p-8 bg-gray-900/50 rounded-2xl hover-lift hover:border-purple-500/30 transition-all duration-300">
+                        <div class="w-20 h-20 rounded-full bg-purple-500/20 flex items-center justify-center mb-8">
+                            <i class="fas fa-share-alt text-purple-400 text-3xl"></i>
+                        </div>
+                        <h4 class="font-heading text-3xl text-white mb-6">Strategic Posting</h4>
+                        <p class="font-body text-gray-400">We handle scheduling and posting with optimal timing for maximum engagement.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Value Proposition Card -->
+            <div class="glass-card p-10 rounded-3xl mb-20 fade-in">
+                <div class="flex flex-col md:flex-row items-center gap-10">
+                    <div class="md:w-1/4 flex justify-center">
+                        <div class="rr-logo" style="width: 150px; height: 185px;">
+                            <div class="rr-phone" style="width: 120px; height: 160px; border-radius: 25px;">
+                                <div class="rr-screen" style="width: 100px; height: 130px; border-radius: 20px;">
+                                    <!-- Reel graphic -->
+                                    <div class="rr-reel" style="width: 70px; height: 70px;">
+                                        <div class="rr-ring ring1" style="border: 3px solid rgba(168, 85, 247, 0.6);"></div>
+                                        <div class="rr-ring ring2" style="inset: 8px; border: 3px solid rgba(236, 72, 153, 0.6);"></div>
+                                        <div class="rr-ring ring3" style="inset: 16px; border: 3px solid rgba(245, 158, 11, 0.6);"></div>
+                                        <!-- Center play icon -->
+                                        <div class="rr-center-circle" style="width: 35px; height: 35px;">
+                                            <svg width="18" height="18" viewBox="0 0 24 24" fill="white">
+                                                <path d="M8 5v14l11-7z"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-3/4 text-center md:text-left">
+                        <h3 class="font-heading text-4xl text-white mb-6">The <span class="gradient-text">Reels As A Service</span> Advantage</h3>
+                        <p class="font-body text-xl text-gray-300 mb-6">
+                            We handle the creative visibility of your Bangalore business so you can focus on what you do best. Our <span class="text-amber-400">Reels As A Service</span> model ensures consistent, high-quality content that showcases your venue at its best, driving engagement and customers through your doors.
+                        </p>
+                        <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+                            <span class="font-body px-5 py-3 bg-amber-500/10 rounded-full text-amber-400 border border-amber-500/30">Creative Edge</span>
+                            <span class="font-body px-5 py-3 bg-pink-500/10 rounded-full text-pink-400 border border-pink-500/30">Consistent Results</span>
+                            <span class="font-body px-5 py-3 bg-purple-500/10 rounded-full text-purple-400 border border-purple-500/30">Local Expertise</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Ancillary Services -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
+                <!-- Social Media Handling -->
+                <div class="glass-card p-8 hover-lift hover-glow fade-in">
+                    <div class="w-20 h-20 rounded-full bg-blue-500/20 flex items-center justify-center mb-8">
+                        <i class="fab fa-instagram text-blue-400 text-3xl"></i>
+                    </div>
+                    <h4 class="font-heading text-2xl text-white mb-6">Social Media Handling</h4>
+                    <p class="font-body text-gray-400 mb-8">Complete management of your Instagram, YouTube and other social platforms.</p>
+                    <ul class="font-body text-gray-300 space-y-4">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-amber-400 mr-4"></i>
+                            <span>Content Calendar</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-amber-400 mr-4"></i>
+                            <span>Community Engagement</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-amber-400 mr-4"></i>
+                            <span>Performance Analytics</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Local SEO -->
+                <div class="glass-card p-8 hover-lift hover-glow fade-in">
+                    <div class="w-20 h-20 rounded-full bg-green-500/20 flex items-center justify-center mb-8">
+                        <i class="fas fa-map-pin text-green-400 text-3xl"></i>
+                    </div>
+                    <h4 class="font-heading text-2xl text-white mb-6">Local SEO</h4>
+                    <p class="font-body text-gray-400 mb-8">Boost your visibility in Bangalore searches and Google Maps.</p>
+                    <ul class="font-body text-gray-300 space-y-4">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-amber-400 mr-4"></i>
+                            <span>GMB Optimization</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-amber-400 mr-4"></i>
+                            <span>Local Citations</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-amber-400 mr-4"></i>
+                            <span>Review Management</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- On-Page SEO -->
+                <div class="glass-card p-8 hover-lift hover-glow fade-in">
+                    <div class="w-20 h-20 rounded-full bg-purple-500/20 flex items-center justify-center mb-8">
+                        <i class="fas fa-search text-purple-400 text-3xl"></i>
+                    </div>
+                    <h4 class="font-heading text-2xl text-white mb-6">On-Page SEO</h4>
+                    <p class="font-body text-gray-400 mb-8">Optimize your website to rank higher in search results.</p>
+                    <ul class="font-body text-gray-300 space-y-4">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-amber-400 mr-4"></i>
+                            <span>Keyword Optimization</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-amber-400 mr-4"></i>
+                            <span>Content Strategy</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-amber-400 mr-4"></i>
+                            <span>Technical SEO Audits</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- YouTube Management -->
+                <div class="glass-card p-8 hover-lift hover-glow fade-in">
+                    <div class="w-20 h-20 rounded-full bg-red-500/20 flex items-center justify-center mb-8">
+                        <i class="fab fa-youtube text-red-400 text-3xl"></i>
+                    </div>
+                    <h4 class="font-heading text-2xl text-white mb-6">YouTube Management</h4>
+                    <p class="font-body text-gray-400 mb-8">Grow your YouTube channel with consistent, optimized content.</p>
+                    <ul class="font-body text-gray-300 space-y-4">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-amber-400 mr-4"></i>
+                            <span>Video SEO</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-amber-400 mr-4"></i>
+                            <span>Thumbnail Design</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-amber-400 mr-4"></i>
+                            <span>Channel Growth Strategy</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="py-32 px-6 md:px-12 relative overflow-hidden">
+        <!-- Background Elements -->
+        <div class="absolute inset-0 bg-gradient-to-b from-gray-900/10 to-black/10 z-0"></div>
+        
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="text-center mb-24 fade-in">
+                <h2 class="font-heading text-6xl md:text-8xl text-white mb-10">
+                    How Our <span class="gradient-text text-shine">Reels As A Service</span> Works
+                </h2>
+                <p class="font-body text-2xl text-gray-400 max-w-3xl mx-auto">
+                    A streamlined <span class="font-funky text-amber-400">process</span> from concept to published content for Bangalore businesses.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-4 gap-10 relative">
+                <!-- Animated Connecting Line -->
+                <div class="hidden md:block absolute top-1/2 left-0 w-full h-2 bg-gradient-to-r from-amber-500/20 via-pink-500/20 to-purple-500/20 -translate-y-1/2 z-0 rounded-full"></div>
+                
+                <!-- Step 1 -->
+                <div class="relative z-10 fade-in">
+                    <div class="glass-card p-10 text-center h-full hover-lift hover-glow">
+                        <div class="w-24 h-24 rounded-full gradient-bg flex items-center justify-center mx-auto mb-10 text-white font-bold text-4xl">1</div>
+                        <h4 class="font-heading text-3xl text-white mb-6">Consultation</h4>
+                        <p class="font-body text-gray-400">We discuss your Bangalore business, goals, and plan the shoot.</p>
+                    </div>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="relative z-10 fade-in" style="transition-delay: 0.2s;">
+                    <div class="glass-card p-10 text-center h-full hover-lift hover-glow">
+                        <div class="w-24 h-24 rounded-full gradient-bg flex items-center justify-center mx-auto mb-10 text-white font-bold text-4xl">2</div>
+                        <h4 class="font-heading text-3xl text-white mb-6">On-Location Shoot</h4>
+                        <p class="font-body text-gray-400">We come to your Bangalore venue with equipment and capture content.</p>
+                    </div>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="relative z-10 fade-in" style="transition-delay: 0.4s;">
+                    <div class="glass-card p-10 text-center h-full hover-lift hover-glow">
+                        <div class="w-24 h-24 rounded-full gradient-bg flex items-center justify-center mx-auto mb-10 text-white font-bold text-4xl">3</div>
+                        <h4 class="font-heading text-3xl text-white mb-6">Editing & Approval</h4>
+                        <p class="font-body text-gray-400">We edit the footage and send for your approval.</p>
+                    </div>
+                </div>
+                
+                <!-- Step 4 -->
+                <div class="relative z-10 fade-in" style="transition-delay: 0.6s;">
+                    <div class="glass-card p-10 text-center h-full hover-lift hover-glow">
+                        <div class="w-24 h-24 rounded-full gradient-bg flex items-center justify-center mx-auto mb-10 text-white font-bold text-4xl">4</div>
+                        <h4 class="font-heading text-3xl text-white mb-6">Post & Manage</h4>
+                        <p class="font-body text-gray-400">We post at optimal times and manage engagement.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact" class="py-32 px-6 md:px-12 relative overflow-hidden">
+        <!-- Background Elements -->
+        <div class="absolute inset-0">
+            <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent via-black/20 to-black/50 z-0"></div>
+            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full bg-gradient-to-r from-amber-500/10 to-pink-500/10 blur-3xl z-0"></div>
+        </div>
+        
+        <div class="max-w-5xl mx-auto glass-card p-12 md:p-16 rounded-3xl text-center relative overflow-hidden fade-in">
+            <!-- Background Elements -->
+            <div class="absolute -top-20 -right-20 w-80 h-80 rounded-full bg-amber-500/10 blur-3xl z-0"></div>
+            <div class="absolute -bottom-20 -left-20 w-80 h-80 rounded-full bg-pink-500/10 blur-3xl z-0"></div>
+            
+            <div class="relative z-10">
+                <!-- Logo Mini Element -->
+                <div class="flex justify-center mb-10">
+                    <div class="rr-logo" style="width: 100px; height: 125px;">
+                        <div class="rr-phone" style="width: 80px; height: 105px; border-radius: 20px;">
+                            <div class="rr-screen" style="width: 65px; height: 85px; border-radius: 15px;">
+                                <!-- Reel graphic -->
+                                <div class="rr-reel" style="width: 45px; height: 45px;">
+                                    <div class="rr-ring ring1" style="border: 2px solid rgba(168, 85, 247, 0.6);"></div>
+                                    <div class="rr-ring ring2" style="inset: 5px; border: 2px solid rgba(236, 72, 153, 0.6);"></div>
+                                    <div class="rr-ring ring3" style="inset: 10px; border: 2px solid rgba(245, 158, 11, 0.6);"></div>
+                                    <!-- Center play icon -->
+                                    <div class="rr-center-circle" style="width: 25px; height: 25px;">
+                                        <svg width="12" height="12" viewBox="0 0 24 24" fill="white">
+                                            <path d="M8 5v14l11-7z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <h2 class="font-heading text-6xl md:text-8xl text-white mb-10">
+                    Ready to <span class="gradient-text text-shine">Dominate</span> Social Media?
+                </h2>
+                
+                <p class="font-body text-2xl text-gray-300 mb-16 max-w-2xl mx-auto">
+                    Let's create <span class="font-funky text-amber-400">scroll-stopping content</span> with our <span class="text-pink-400">Reels As A Service</span> that turns viewers into customers. Book your first shoot today.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-8 justify-center">
+                    <a href="tel:+918897977808" class="font-funky px-14 py-7 gradient-bg rounded-full text-white font-bold text-2xl flex items-center justify-center space-x-6 hover:shadow-2xl hover:scale-105 transition-all duration-300 button-pulse">
+                        <i class="fas fa-phone"></i>
+                        <span>Call Now: +91 88979 77808</span>
+                    </a>
+                    
+                    <a href="mailto:hello@reelrascals.in" class="font-body px-14 py-7 rounded-full border-2 border-gray-700 text-white font-bold text-2xl flex items-center justify-center space-x-6 hover:bg-gray-800/50 hover:scale-105 transition-all duration-300 hover:border-pink-500/50">
+                        <i class="fas fa-envelope"></i>
+                        <span>Email Us</span>
+                    </a>
+                </div>
+                
+                <p class="font-body text-gray-400 mt-14 text-xl">
+                    <span class="text-amber-400">Response time: Under 2 hours</span> during business hours
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-20 px-6 md:px-12 border-t border-gray-800/30 relative overflow-hidden">
+        <!-- Footer Background -->
+        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent z-0"></div>
+        
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="flex flex-col md:flex-row justify-between items-start">
+                <!-- Logo and Description -->
+                <div class="mb-12 md:mb-0 text-center md:text-left md:w-2/5">
+                    <div class="flex items-center space-x-4 justify-center md:justify-start mb-8">
+                        <div class="rr-logo logo-footer">
+                            <div class="rr-phone">
+                                <div class="rr-screen">
+                                    <!-- Reel graphic -->
+                                    <div class="rr-reel">
+                                        <div class="rr-ring ring1"></div>
+                                        <div class="rr-ring ring2"></div>
+                                        <div class="rr-ring ring3"></div>
+                                        <!-- Center play icon -->
+                                        <div class="rr-center-circle">
+                                            <svg viewBox="0 0 24 24" fill="white">
+                                                <path d="M8 5v14l11-7z"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h2 class="font-heading text-4xl text-white font-black tracking-tighter">
+                                Reel<span class="gradient-text">Rascals</span>
+                            </h2>
+                            <p class="font-body text-sm text-amber-400 -mt-1">
+                                Reels As A <span class="text-pink-400">Service</span>
+                            </p>
+                        </div>
+                    </div>
+                    <p class="font-body text-gray-500 mb-8">
+                        Professional on-location <span class="text-amber-400">Reels As A Service</span> for Bangalore restaurants, bars, resorts, and real estate. We handle creative visibility for local businesses.
+                    </p>
+                    <!-- Social Media -->
+                    <div class="flex space-x-6 justify-center md:justify-start">
+                        <a href="https://instagram.com/reelrascals.in" target="_blank" class="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center hover:bg-gray-700 transition-all duration-300 hover:scale-110 hover:shadow-lg">
+                            <i class="fab fa-instagram text-gray-300 text-xl"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@reelrascals_in" target="_blank" class="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center hover:bg-gray-700 transition-all duration-300 hover:scale-110 hover:shadow-lg">
+                            <i class="fab fa-youtube text-gray-300 text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links and Contact -->
+                <div class="flex flex-col md:flex-row md:w-3/5 gap-12">
+                    <!-- Quick Links -->
+                    <div class="text-center md:text-left">
+                        <h4 class="font-heading text-2xl font-bold text-white mb-8">Quick Links</h4>
+                        <div class="flex flex-col space-y-4">
+                            <a href="#services" class="font-body text-gray-400 hover:text-amber-400 transition-all duration-300">Services</a>
+                            <a href="#process" class="font-body text-gray-400 hover:text-amber-400 transition-all duration-300">How It Works</a>
+                            <a href="#contact" class="font-body text-gray-400 hover:text-amber-400 transition-all duration-300">Contact Us</a>
+                            <a href="#" class="font-body text-gray-400 hover:text-amber-400 transition-all duration-300">Blog</a>
+                            <a href="#" class="font-body text-gray-400 hover:text-amber-400 transition-all duration-300">Careers</a>
+                            <a href="#" class="font-body text-gray-400 hover:text-amber-400 transition-all duration-300">Privacy Policy</a>
+                            <a href="#" class="font-body text-gray-400 hover:text-amber-400 transition-all duration-300">Terms of Service</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Contact Info -->
+                    <div class="text-center md:text-left">
+                        <h4 class="font-heading text-2xl font-bold text-white mb-8">Contact Info</h4>
+                        <div class="flex flex-col space-y-6">
+                            <p class="font-body text-gray-400">
+                                <i class="fas fa-map-marker-alt text-amber-400 mr-4"></i>
+                                Based in Bangalore
+                            </p>
+                            <p class="font-body text-gray-400">
+                                <i class="fas fa-phone text-amber-400 mr-4"></i>
+                                +91 88979 77808
+                            </p>
+                            <p class="font-body text-gray-400">
+                                <i class="fas fa-envelope text-amber-400 mr-4"></i>
+                                hello@reelrascals.in
+                            </p>
+                            <p class="font-body text-gray-400">
+                                <i class="fas fa-clock text-amber-400 mr-4"></i>
+                                Mon-Sat: 9AM - 8PM
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Useful Pages -->
+                    <div class="text-center md:text-left">
+                        <h4 class="font-heading text-2xl font-bold text-white mb-8">Useful Pages</h4>
+                        <div class="flex flex-col space-y-4">
+                            <a href="#" class="font-body text-gray-400 hover:text-amber-400 transition-all duration-300">Case Studies</a>
+                            <a href="#" class="font-body text-gray-400 hover:text-amber-400 transition-all duration-300">Portfolio</a>
+                            <a href="#" class="font-body text-gray-400 hover:text-amber-400 transition-all duration-300">Pricing</a>
+                            <a href="#" class="font-body text-gray-400 hover:text-amber-400 transition-all duration-300">FAQ</a>
+                            <a href="#" class="font-body text-gray-400 hover:text-amber-400 transition-all duration-300">Testimonials</a>
+                            <a href="#" class="font-body text-gray-400 hover:text-amber-400 transition-all duration-300">About Us</a>
+                            <a href="#" class="font-body text-gray-400 hover:text-amber-400 transition-all duration-300">Our Team</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Copyright -->
+            <div class="border-t border-gray-800/30 mt-16 pt-10 text-center text-gray-500">
+                <p class="font-body">© 2023 ReelRascals. All rights reserved. | <span class="text-amber-400">Crafted with <i class="fas fa-heart text-pink-500"></i> for Bangalore businesses that want to shine online.</span></p>
+                <p class="font-body text-sm mt-4">Reels As A Service is our specialty for local business visibility</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Create particle background
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 30;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                
+                // Random size between 2px and 8px
+                const size = Math.random() * 6 + 2;
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                
+                // Random position
+                particle.style.left = `${Math.random() * 100}vw`;
+                particle.style.top = `${Math.random() * 100}vh`;
+                
+                // Random animation duration
+                const duration = Math.random() * 20 + 10;
+                particle.style.animationDuration = `${duration}s`;
+                
+                // Random delay
+                const delay = Math.random() * 5;
+                particle.style.animationDelay = `${delay}s`;
+                
+                // Random opacity
+                const opacity = Math.random() * 0.2 + 0.1;
+                particle.style.opacity = opacity;
+                
+                particlesContainer.appendChild(particle);
+            }
+        }
+        
+        // Mobile Menu Toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+            this.innerHTML = menu.classList.contains('hidden') ? 
+                '<i class="fas fa-bars text-2xl"></i>' : 
+                '<i class="fas fa-times text-2xl"></i>';
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    // Close mobile menu if open
+                    document.getElementById('mobile-menu').classList.add('hidden');
+                    document.getElementById('mobile-menu-btn').innerHTML = '<i class="fas fa-bars text-2xl"></i>';
+                    
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Scroll animation
+        const fadeElements = document.querySelectorAll('.fade-in');
+        
+        const fadeInOnScroll = () => {
+            fadeElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add('visible');
+                }
+            });
+        };
+        
+        // Initial check
+        fadeInOnScroll();
+        
+        // Listen for scroll events
+        window.addEventListener('scroll', fadeInOnScroll);
+        
+        // Add scroll effect to navbar
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.classList.add('bg-black/95', 'shadow-2xl');
+            } else {
+                nav.classList.remove('bg-black/95', 'shadow-2xl');
+            }
+        });
+        
+        // Initialize
+        createParticles();
+        
+        // Console greeting
+        console.log('%c🎬 ReelRascals 🎬', 'font-size: 28px; color: #f59e0b; font-weight: bold;');
+        console.log('%cReels As A Service for Bangalore restaurants, bars, resorts & real estate', 'font-size: 16px; color: #ec4899;');
+        console.log('%cReady to handle your business visibility? Contact: 8897977808', 'font-size: 14px; color: #fff;');
+    </script>
+</body>
+</html>
