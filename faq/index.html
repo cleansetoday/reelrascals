@@ -320,21 +320,68 @@
         
         /* Mobile Responsiveness */
         @media (max-width: 768px) {
+            /* Global center alignment for mobile */
+            body {
+                text-align: center;
+            }
+            
+            /* All sections center aligned */
+            section {
+                text-align: center !important;
+                padding-top: 3rem !important;
+                padding-bottom: 3rem !important;
+            }
+            
+            /* Hero section mobile */
+            .lg\:grid-cols-2 {
+                grid-template-columns: 1fr !important;
+                text-align: center !important;
+            }
+            
+            .grid.lg\:grid-cols-2 > div {
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+                text-align: center !important;
+            }
+            
+            /* Buttons stack vertically and center */
+            .flex.flex-col.sm\:flex-row {
+                flex-direction: column !important;
+                align-items: center !important;
+                width: 100% !important;
+            }
+            
+            .flex.flex-col.sm\:flex-row > a {
+                width: 100% !important;
+                max-width: 300px !important;
+                justify-content: center !important;
+                text-align: center !important;
+            }
+            
             h1 {
-                font-size: 2.75rem !important;
+                font-size: 2.25rem !important;
                 letter-spacing: -1px;
+                text-align: center !important;
             }
             
             h2 {
-                font-size: 2.5rem !important;
+                font-size: 2rem !important;
+                text-align: center !important;
             }
             
             h3 {
-                font-size: 1.5rem !important;
+                font-size: 1.4rem !important;
+                text-align: center !important;
             }
             
             h4 {
-                font-size: 1.25rem !important;
+                font-size: 1.2rem !important;
+                text-align: center !important;
+            }
+            
+            p {
+                text-align: center !important;
             }
             
             .whatsapp-button {
@@ -348,6 +395,97 @@
             /* Hero logo size on mobile */
             section .logo-img {
                 max-height: 180px !important;
+                margin: 0 auto !important;
+            }
+            
+            /* Navigation center aligned */
+            nav .flex.items-center {
+                justify-content: center !important;
+            }
+            
+            nav .logo-img {
+                max-height: 50px !important;
+            }
+            
+            /* FAQ cards */
+            .glass-card {
+                text-align: left !important;
+                margin: 0 auto !important;
+            }
+            
+            .faq-question {
+                text-align: left !important;
+            }
+            
+            .faq-answer {
+                text-align: left !important;
+            }
+            
+            /* Footer center alignment */
+            footer .grid {
+                text-align: center !important;
+            }
+            
+            footer .md\:text-left {
+                text-align: center !important;
+            }
+            
+            footer .flex.items-center {
+                justify-content: center !important;
+            }
+            
+            footer .md\:items-start {
+                align-items: center !important;
+            }
+            
+            /* Max width for readability */
+            .max-w-7xl,
+            .max-w-6xl,
+            .max-w-5xl,
+            .max-w-4xl,
+            .max-w-3xl,
+            .max-w-2xl {
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+        }
+        
+        /* Extra small screens */
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.75rem !important;
+            }
+            
+            h2 {
+                font-size: 1.5rem !important;
+            }
+            
+            h3 {
+                font-size: 1.2rem !important;
+            }
+            
+            nav .logo-img {
+                max-height: 40px !important;
+            }
+            
+            nav h1 {
+                font-size: 1.25rem !important;
+            }
+            
+            nav p {
+                font-size: 0.65rem !important;
+            }
+            
+            section .logo-img {
+                max-height: 150px !important;
+            }
+            
+            .glass-card {
+                padding: 1rem !important;
+            }
+            
+            footer .logo-img {
+                max-height: 70px !important;
             }
         }
         
