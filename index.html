@@ -675,6 +675,45 @@
                 display: none;
             }
             
+            /* Global center alignment for mobile */
+            body {
+                text-align: center;
+            }
+            
+            /* All sections center aligned */
+            section {
+                text-align: center !important;
+                padding-top: 3rem !important;
+                padding-bottom: 3rem !important;
+            }
+            
+            /* Hero section mobile */
+            .lg\:grid-cols-2 {
+                grid-template-columns: 1fr !important;
+                text-align: center !important;
+            }
+            
+            .grid.lg\:grid-cols-2 > div {
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+                text-align: center !important;
+            }
+            
+            /* Buttons stack vertically and center */
+            .flex.flex-col.sm\:flex-row {
+                flex-direction: column !important;
+                align-items: center !important;
+                width: 100% !important;
+            }
+            
+            .flex.flex-col.sm\:flex-row > a {
+                width: 100% !important;
+                max-width: 300px !important;
+                justify-content: center !important;
+                text-align: center !important;
+            }
+            
             /* Footer center alignment on mobile */
             footer .flex.flex-col {
                 align-items: center !important;
@@ -708,19 +747,27 @@
             h1 {
                 font-size: 2rem !important;
                 line-height: 1.2 !important;
+                text-align: center !important;
             }
             
             h2 {
                 font-size: 1.8rem !important;
                 line-height: 1.3 !important;
+                text-align: center !important;
             }
             
             h3 {
                 font-size: 1.5rem !important;
+                text-align: center !important;
             }
             
             h4 {
                 font-size: 1.25rem !important;
+                text-align: center !important;
+            }
+            
+            p {
+                text-align: center !important;
             }
             
             /* Button text responsive */
@@ -740,13 +787,27 @@
             }
             
             .hero-logo-mobile {
-                max-height: 150px !important;
+                max-height: 180px !important;
+                margin: 0 auto !important;
             }
             
-            /* Padding adjustments */
-            section {
-                padding-top: 3rem !important;
-                padding-bottom: 3rem !important;
+            /* Navigation center aligned */
+            nav .flex.items-center {
+                justify-content: center !important;
+            }
+            
+            /* Service cards */
+            .grid.md\:grid-cols-3,
+            .grid.md\:grid-cols-2,
+            .grid.md\:grid-cols-4 {
+                grid-template-columns: 1fr !important;
+                gap: 1.5rem !important;
+            }
+            
+            /* Process steps center aligned */
+            .glass-card {
+                text-align: center !important;
+                margin: 0 auto !important;
             }
             
             /* Footer width on mobile */
@@ -758,6 +819,45 @@
             /* Footer sections gap */
             footer .gap-12 {
                 gap: 2rem !important;
+            }
+            
+            /* Client type tags center */
+            .flex.flex-wrap {
+                justify-content: center !important;
+            }
+            
+            /* Max width for readability */
+            .max-w-7xl,
+            .max-w-6xl,
+            .max-w-5xl,
+            .max-w-4xl,
+            .max-w-3xl,
+            .max-w-2xl {
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+            
+            /* Portfolio section */
+            #portfolio .inline-block {
+                display: block !important;
+                width: 100% !important;
+            }
+            
+            #portfolio .glass-card {
+                padding: 1.5rem !important;
+            }
+            
+            /* Inline flex items center */
+            .inline-flex {
+                display: flex !important;
+                width: 100% !important;
+                max-width: 300px !important;
+                margin: 0 auto !important;
+            }
+            
+            /* Text align for spans */
+            span {
+                text-align: center !important;
             }
         }
         
@@ -1245,66 +1345,18 @@
                 </p>
             </div>
             
-            <!-- Portfolio Grid Preview -->
-            <div class="grid md:grid-cols-3 gap-8 mb-16">
-                <!-- Portfolio Card 1 -->
-                <div class="glass-card p-8 hover-lift hover-wiggle animate-fade-in-up animate-delay-100">
-                    <div class="w-full aspect-[9/16] bg-gradient-to-br from-pink-200 to-purple-200 rounded-2xl mb-6 flex items-center justify-center overflow-hidden relative group">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                        <div class="absolute inset-0 flex items-center justify-center">
-                            <i class="fas fa-play-circle text-white text-6xl opacity-80 group-hover:scale-110 transition-transform duration-300"></i>
-                        </div>
-                        <div class="absolute bottom-4 left-4 right-4 text-white">
-                            <p class="font-heading text-lg font-bold">Restaurant Reels</p>
-                            <p class="font-body text-sm">Behind-the-scenes content</p>
-                        </div>
-                    </div>
-                    <p class="font-body text-gray-600 text-center">Professional on-location shoots</p>
-                </div>
-                
-                <!-- Portfolio Card 2 -->
-                <div class="glass-card p-8 hover-lift hover-wiggle animate-fade-in-up animate-delay-200">
-                    <div class="w-full aspect-[9/16] bg-gradient-to-br from-purple-200 to-pink-200 rounded-2xl mb-6 flex items-center justify-center overflow-hidden relative group">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                        <div class="absolute inset-0 flex items-center justify-center">
-                            <i class="fas fa-play-circle text-white text-6xl opacity-80 group-hover:scale-110 transition-transform duration-300"></i>
-                        </div>
-                        <div class="absolute bottom-4 left-4 right-4 text-white">
-                            <p class="font-heading text-lg font-bold">Bar & Lounge</p>
-                            <p class="font-body text-sm">Ambiance showcase</p>
-                        </div>
-                    </div>
-                    <p class="font-body text-gray-600 text-center">Capturing the vibe</p>
-                </div>
-                
-                <!-- Portfolio Card 3 -->
-                <div class="glass-card p-8 hover-lift hover-wiggle animate-fade-in-up animate-delay-300">
-                    <div class="w-full aspect-[9/16] bg-gradient-to-br from-pink-200 to-purple-200 rounded-2xl mb-6 flex items-center justify-center overflow-hidden relative group">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                        <div class="absolute inset-0 flex items-center justify-center">
-                            <i class="fas fa-play-circle text-white text-6xl opacity-80 group-hover:scale-110 transition-transform duration-300"></i>
-                        </div>
-                        <div class="absolute bottom-4 left-4 right-4 text-white">
-                            <p class="font-heading text-lg font-bold">Resort Tours</p>
-                            <p class="font-body text-sm">Luxury properties</p>
-                        </div>
-                    </div>
-                    <p class="font-body text-gray-600 text-center">Showcasing experiences</p>
-                </div>
-            </div>
-            
             <!-- CTA to Portfolio -->
             <div class="text-center animate-fade-in-up animate-delay-400">
-                <div class="inline-block glass-card p-10 rounded-3xl border-2 border-pink-300 hover:border-pink-500 transition-all duration-300">
-                    <p class="font-body text-xl text-gray-700 mb-8">
+                <div class="glass-card p-8 md:p-10 rounded-3xl border-2 border-pink-300 hover:border-pink-500 transition-all duration-300 max-w-2xl mx-auto">
+                    <p class="font-body text-lg md:text-xl text-gray-700 mb-8">
                         <span class="font-bold text-pink-600">13 Reels</span> showcasing our work with local businesses
                     </p>
-                    <a href="https://drive.google.com/drive/folders/1UiS0TfvMzQ4qG0YbWePvZmlbV_xX1GB-?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 px-10 py-5 gradient-bg text-white rounded-full font-bold font-body text-lg hover:shadow-2xl hover:scale-110 transition-all duration-300 button-pulse">
-                        <i class="fas fa-video text-2xl"></i>
-                        View Full Portfolio
-                        <i class="fas fa-external-link-alt"></i>
+                    <a href="https://drive.google.com/drive/folders/1UiS0TfvMzQ4qG0YbWePvZmlbV_xX1GB-?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-3 px-8 md:px-10 py-4 md:py-5 gradient-bg text-white rounded-full font-bold font-body text-base md:text-lg hover:shadow-2xl hover:scale-110 transition-all duration-300 button-pulse w-full md:w-auto max-w-sm">
+                        <i class="fas fa-video text-xl md:text-2xl"></i>
+                        <span>View Full Portfolio</span>
+                        <i class="fas fa-external-link-alt text-sm"></i>
                     </a>
-                    <p class="font-body text-sm text-gray-500 mt-6">
+                    <p class="font-body text-xs md:text-sm text-gray-500 mt-6">
                         <i class="fas fa-lock mr-2"></i>Opens in Google Drive
                     </p>
                 </div>
