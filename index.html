@@ -637,10 +637,6 @@
         
         /* Mobile Responsive Adjustments */
         @media (max-width: 768px) {
-            .font-heading {
-                font-size: 1.8rem !important;
-            }
-            
             .whatsapp-button {
                 width: 60px;
                 height: 60px;
@@ -668,117 +664,82 @@
             .hero-logo-mobile {
                 max-height: 200px !important;
             }
-        }
-        
-        @media (max-width: 640px) {
-            .whatsapp-tooltip {
-                display: none;
-            }
-            
-            /* Global center alignment for mobile */
+
+            /* Global center alignment for mobile/tablet */
             body {
                 text-align: center;
             }
-            
-            /* All sections center aligned */
+
             section {
                 text-align: center !important;
                 padding-top: 3rem !important;
                 padding-bottom: 3rem !important;
             }
-            
-            /* Hero section mobile */
+
+            /* Center the nav brand while keeping the hamburger accessible */
+            nav > div.max-w-7xl {
+                position: relative;
+                justify-content: center !important;
+            }
+
+            #mobile-menu-btn {
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            /* Hero two-column layout -> one column */
             .lg\:grid-cols-2 {
                 grid-template-columns: 1fr !important;
                 text-align: center !important;
             }
-            
+
             .grid.lg\:grid-cols-2 > div {
                 display: flex !important;
                 flex-direction: column !important;
                 align-items: center !important;
                 text-align: center !important;
             }
-            
-            /* Buttons stack vertically and center */
+
+            /* Buttons: keep stacked up to tablet widths */
             .flex.flex-col.sm\:flex-row {
                 flex-direction: column !important;
                 align-items: center !important;
                 width: 100% !important;
             }
-            
+
             .flex.flex-col.sm\:flex-row > a {
                 width: 100% !important;
-                max-width: 300px !important;
+                max-width: 340px !important;
                 justify-content: center !important;
                 text-align: center !important;
             }
-            
-            /* Footer center alignment on mobile */
-            footer .flex.flex-col {
-                align-items: center !important;
+
+            /* Don’t force all headings smaller (Tailwind already handles this) */
+            h1, h2, h3, h4, h5, h6 {
                 text-align: center !important;
             }
-            
-            footer .md\:flex-row {
-                justify-content: center !important;
-            }
-            
-            /* Ensure all footer sections are centered */
-            footer .text-center {
-                text-align: center !important;
-            }
-            
-            footer .md\:text-left {
-                text-align: center !important;
-            }
-            
-            footer .md\:justify-start {
-                justify-content: center !important;
-            }
-            
-            /* Logo container center alignment */
-            footer .flex.items-center {
-                justify-content: center !important;
-                flex-wrap: wrap !important;
-            }
-            
-            /* Responsive text sizes */
-            h1 {
-                font-size: 2rem !important;
-                line-height: 1.2 !important;
-                text-align: center !important;
-            }
-            
-            h2 {
-                font-size: 1.8rem !important;
-                line-height: 1.3 !important;
-                text-align: center !important;
-            }
-            
-            h3 {
-                font-size: 1.5rem !important;
-                text-align: center !important;
-            }
-            
-            h4 {
-                font-size: 1.25rem !important;
-                text-align: center !important;
-            }
-            
+
             p {
                 text-align: center !important;
             }
-            
-            /* Button text responsive */
-            .font-funky {
-                font-size: 0.9rem !important;
+
+            /* Keep lists readable on mobile */
+            .glass-card ul,
+            .glass-card ol,
+            .glass-card li {
+                text-align: left !important;
             }
-            
-            /* Contact buttons mobile */
-            a[href^="tel:"] span,
-            a[href^="mailto:"] span {
-                font-size: 0.85rem !important;
+
+            .glass-card li {
+                justify-content: flex-start !important;
+            }
+        }
+        
+        @media (max-width: 640px) {
+            .whatsapp-tooltip {
+                display: none;
             }
             
             /* Logo sizes on small screens */
@@ -789,41 +750,6 @@
             .hero-logo-mobile {
                 max-height: 180px !important;
                 margin: 0 auto !important;
-            }
-            
-            /* Navigation center aligned */
-            nav .flex.items-center {
-                justify-content: center !important;
-            }
-            
-            /* Service cards */
-            .grid.md\:grid-cols-3,
-            .grid.md\:grid-cols-2,
-            .grid.md\:grid-cols-4 {
-                grid-template-columns: 1fr !important;
-                gap: 1.5rem !important;
-            }
-            
-            /* Process steps center aligned */
-            .glass-card {
-                text-align: center !important;
-                margin: 0 auto !important;
-            }
-            
-            /* Footer width on mobile */
-            footer .md\:w-2\/5,
-            footer .md\:w-3\/5 {
-                width: 100% !important;
-            }
-            
-            /* Footer sections gap */
-            footer .gap-12 {
-                gap: 2rem !important;
-            }
-            
-            /* Client type tags center */
-            .flex.flex-wrap {
-                justify-content: center !important;
             }
             
             /* Max width for readability */
@@ -854,11 +780,6 @@
                 max-width: 300px !important;
                 margin: 0 auto !important;
             }
-            
-            /* Text align for spans */
-            span {
-                text-align: center !important;
-            }
         }
         
         /* Extra small screens */
@@ -879,6 +800,11 @@
             /* Hero section adjustments */
             .hero-logo-mobile {
                 max-height: 120px !important;
+            }
+
+            /* Hero stats grid: prevent cramped 3-column layout */
+            .grid.grid-cols-3 {
+                grid-template-columns: 1fr !important;
             }
             
             /* Button padding */
