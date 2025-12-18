@@ -806,6 +806,43 @@
         
         /* Extra small screens */
         @media (max-width: 480px) {
+            /* Global mobile polish: make Tailwind desktop-y sizes feel like the reference screenshot */
+            body {
+                padding-bottom: 90px;
+            }
+
+            nav {
+                padding-top: 0.75rem !important;
+                padding-bottom: 0.75rem !important;
+            }
+
+            /* Typography scale overrides (mobile) */
+            .text-8xl { font-size: 3.1rem !important; line-height: 1.02 !important; }
+            .text-7xl { font-size: 2.6rem !important; line-height: 1.08 !important; }
+            .text-6xl { font-size: 2.25rem !important; line-height: 1.08 !important; }
+            .text-5xl { font-size: 2.05rem !important; line-height: 1.12 !important; }
+            .text-4xl { font-size: 1.7rem !important; line-height: 1.18 !important; }
+            .text-3xl { font-size: 1.35rem !important; line-height: 1.22 !important; }
+            .text-2xl { font-size: 1.18rem !important; line-height: 1.25 !important; }
+            .text-xl  { font-size: 1.05rem !important; line-height: 1.35 !important; }
+            .text-lg  { font-size: 1rem !important; line-height: 1.5 !important; }
+
+            /* Spacing scale overrides (mobile) */
+            .pt-48 { padding-top: 8.25rem !important; }
+            .pb-32 { padding-bottom: 5rem !important; }
+            .py-32 { padding-top: 5rem !important; padding-bottom: 5rem !important; }
+            .py-24 { padding-top: 4rem !important; padding-bottom: 4rem !important; }
+            .py-20 { padding-top: 3.75rem !important; padding-bottom: 3.75rem !important; }
+            .gap-20 { gap: 2.75rem !important; }
+            .gap-12 { gap: 2rem !important; }
+            .gap-10 { gap: 1.5rem !important; }
+
+            /* Card padding (mobile) */
+            .p-12 { padding: 1.5rem !important; }
+            .p-10 { padding: 1.25rem !important; }
+            .p-8  { padding: 1.25rem !important; }
+            .p-6  { padding: 1rem !important; }
+
             /* Navigation logo */
             nav .logo-img {
                 max-height: 40px !important;
@@ -822,6 +859,55 @@
             /* Hero section adjustments */
             .hero-logo-mobile {
                 max-height: 120px !important;
+            }
+
+            /* Hero typography polish: avoid awkward wraps like “Scroll- / Stopping” */
+            .hero-title {
+                max-width: 20ch;
+                margin-left: auto !important;
+                margin-right: auto !important;
+                line-height: 1.05 !important;
+                margin-bottom: 1.25rem !important;
+            }
+
+            .hero-preline {
+                font-size: 1.4rem !important;
+                margin-bottom: 0.35rem !important;
+            }
+
+            .hero-mainword {
+                font-size: 3.1rem !important;
+                margin-bottom: 0.5rem !important;
+            }
+
+            .hero-subline {
+                font-size: 1.35rem !important;
+                line-height: 1.35 !important;
+                margin-top: 0.75rem !important;
+                max-width: 26ch;
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+
+            .hero-lead {
+                font-size: 1rem !important;
+                margin-bottom: 1.5rem !important;
+                max-width: 40ch !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+
+            /* WhatsApp button: slightly smaller to reduce overlap on small phones */
+            .whatsapp-button {
+                width: 52px !important;
+                height: 52px !important;
+                bottom: 16px !important;
+                right: 16px !important;
+                opacity: 0.92;
+            }
+
+            .whatsapp-button i {
+                font-size: 26px !important;
             }
 
             /* Hero stats grid: prevent cramped 3-column layout */
@@ -943,17 +1029,17 @@
                         </span>
                     </div>
                     
-                    <h1 class="text-6xl md:text-8xl text-gray-900 leading-tight mb-10 animate-fade-down">
-                        <span class="block text-4xl md:text-5xl mb-3 text-gray-700 animate-slide-left">We Handle Your</span>
-                        <span class="gradient-text block mb-4 text-6xl md:text-8xl animate-gradient animate-slide-right">Visibility.</span>
-                        <span class="font-body block text-3xl md:text-4xl text-gray-700 mt-6 leading-snug animate-slide-up">
+                    <h1 class="hero-title text-6xl md:text-8xl text-gray-900 leading-tight mb-10 animate-fade-down">
+                        <span class="hero-preline block text-4xl md:text-5xl mb-3 text-gray-700 animate-slide-left">We Handle Your</span>
+                        <span class="hero-mainword gradient-text block mb-4 text-6xl md:text-8xl animate-gradient animate-slide-right">Visibility.</span>
+                        <span class="hero-subline font-body block text-3xl md:text-4xl text-gray-700 mt-6 leading-snug animate-slide-up">
                             We Shoot. <span class="text-pink-600 font-bold">We Edit.</span><br>
                             We Make You 
-                            <span class="text-purple-600 font-bold">Scroll-Stopping</span>.
+                            <span class="text-purple-600 font-bold whitespace-nowrap">Scroll&#8209;Stopping</span>.
                         </span>
                     </h1>
                     
-                    <p class="font-body text-lg md:text-xl text-gray-600 mb-12 max-w-2xl leading-relaxed animate-fade-down stagger-2">
+                    <p class="hero-lead font-body text-lg md:text-xl text-gray-600 mb-12 max-w-2xl leading-relaxed animate-fade-down stagger-2">
                         Professional <span class="font-funky text-pink-600 font-bold">Reels As A Service</span> for Bangalore restaurants, bars, resorts, and real estate. We handle everything from <span class="font-semibold">concept to posting</span>, keeping your social media alive with authentic, engaging content.
                     </p>
                     
