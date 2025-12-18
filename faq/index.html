@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Instagram Reels for Local Businesses | ReelRascals</title>
+    <meta name="description" content="Everything you need to know about Instagram Reels for local businesses. Learn how we help boost your visibility and drive real sales through strategic social media management.">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/cleansetoday/reelrascals/main/raas.png">
+    
+    <style>
+        :root {
+            --primary-pink: #ec4899;
+            --primary-purple: #d946ef;
+            --light-bg: #ffffff;
+            --light-bg-secondary: #fef3f2;
+            --text-dark: #1f2937;
+            --text-gray: #4b5563;
+        }
+        
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background: linear-gradient(135deg, #ffffff 0%, #fef3f2 50%, #fff5f7 100%);
+            color: var(--text-dark);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+        
+        /* Proper Heading Hierarchy */
+        h1, h2, h3, h4, h5, h6, .font-heading {
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        
+        h1 {
+            font-size: 4.5rem;
+            font-weight: 800;
+            letter-spacing: -2px;
+        }
+        
+        h2 {
+            font-size: 3.75rem;
+            font-weight: 700;
+            letter-spacing: -1.5px;
+        }
+        
+        h3 {
+            font-size: 1.85rem;
+            font-weight: 700;
+        }
+        
+        h4 {
+            font-size: 1.4rem;
+            font-weight: 600;
+        }
+        
+        h5 {
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+        
+        h6 {
+            font-size: 1rem;
+            font-weight: 600;
+        }
+        
+        .font-body {
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: 400;
+        }
+        
+        .font-funky {
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(90deg, #d946ef, var(--primary-pink));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            display: inline-block;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, var(--primary-pink), #d946ef);
+        }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(236, 72, 153, 0.2);
+            border-radius: 1.5rem;
+            box-shadow: 0 8px 32px rgba(236, 72, 153, 0.1);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        /* Particle Background */
+        .particles-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -3;
+            overflow: hidden;
+        }
+        
+        .particle {
+            position: absolute;
+            border-radius: 50%;
+            background: linear-gradient(45deg, var(--primary-pink), #d946ef);
+            opacity: 0.15;
+            animation: float 20s infinite ease-in-out;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            25% { transform: translate(100px, -100px) scale(1.1); }
+            50% { transform: translate(-50px, -150px) scale(0.9); }
+            75% { transform: translate(-100px, -50px) scale(1.05); }
+        }
+        
+        /* Dynamic Grid Background */
+        .grid-bg {
+            background-image: 
+                linear-gradient(rgba(236, 72, 153, 0.25) 2px, transparent 2px),
+                linear-gradient(90deg, rgba(217, 70, 239, 0.22) 2px, transparent 2px);
+            background-size: 60px 60px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            animation: gridMove 20s linear infinite;
+            transform-origin: center;
+            opacity: 1;
+            pointer-events: none;
+        }
+        
+        @keyframes gridMove {
+            0% { transform: translate(0, 0); }
+            50% { transform: translate(-30px, -30px); }
+            100% { transform: translate(0, 0); }
+        }
+        
+        .grid-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(236, 72, 153, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(217, 70, 239, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 40% 80%, rgba(249, 168, 212, 0.08) 0%, transparent 50%);
+            z-index: 0;
+            pointer-events: none;
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+        }
+        
+        .animate-delay-100 { animation-delay: 0.1s; }
+        .animate-delay-200 { animation-delay: 0.2s; }
+        .animate-delay-300 { animation-delay: 0.3s; }
+        .animate-delay-400 { animation-delay: 0.4s; }
+        .animate-delay-500 { animation-delay: 0.5s; }
+        .animate-delay-600 { animation-delay: 0.6s; }
+        
+        @keyframes spin-slow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        .animate-spin-slow {
+            animation: spin-slow 20s linear infinite;
+        }
+        
+        .fade-in {
+            opacity: 1;
+            animation: fadeIn 1s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes float-x {
+            0%, 100% { transform: translateX(0) translateY(0); }
+            50% { transform: translateX(50px) translateY(-20px); }
+        }
+        
+        @keyframes float-y {
+            0%, 100% { transform: translateX(0) translateY(0); }
+            50% { transform: translateX(-30px) translateY(40px); }
+        }
+        
+        .float-x { animation: float-x 10s ease-in-out infinite; }
+        .float-y { animation: float-y 12s ease-in-out infinite; }
+        
+        .hover-wiggle {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-wiggle:hover {
+            animation: wiggle 0.5s ease;
+        }
+        
+        @keyframes wiggle {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(-2deg); }
+            75% { transform: rotate(2deg); }
+        }
+        
+        /* FAQ Accordion */
+        .faq-item {
+            transition: all 0.3s ease;
+        }
+        
+        .faq-question {
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-question:hover {
+            background: rgba(236, 72, 153, 0.05);
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease, padding 0.3s ease;
+        }
+        
+        .faq-answer.active {
+            max-height: 2000px;
+        }
+        
+        .faq-icon {
+            transition: transform 0.3s ease;
+        }
+        
+        .faq-icon.active {
+            transform: rotate(180deg);
+        }
+        
+        /* WhatsApp Button */
+        .whatsapp-button {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 30px;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .whatsapp-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6);
+        }
+        
+        .whatsapp-button:hover .whatsapp-tooltip {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .whatsapp-tooltip {
+            position: absolute;
+            right: 70px;
+            background: rgba(31, 41, 55, 0.95);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 8px;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            font-size: 14px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.75rem !important;
+                letter-spacing: -1px;
+            }
+            
+            h2 {
+                font-size: 2.5rem !important;
+            }
+            
+            h3 {
+                font-size: 1.5rem !important;
+            }
+            
+            h4 {
+                font-size: 1.25rem !important;
+            }
+            
+            .whatsapp-button {
+                width: 50px;
+                height: 50px;
+                font-size: 24px;
+                bottom: 20px;
+                right: 20px;
+            }
+            
+            /* Hero logo size on mobile */
+            section .logo-img {
+                max-height: 180px !important;
+            }
+        }
+        
+        /* Logo Image Styles */
+        .logo-img {
+            object-fit: contain;
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body class="relative overflow-x-hidden">
+    
+    <!-- Particle Background -->
+    <div class="particles-bg" id="particles"></div>
+    
+    <!-- Animated Grid Background -->
+    <div class="grid-bg"></div>
+    <div class="grid-overlay"></div>
+    
+    <!-- Floating Background Elements -->
+    <div class="fixed top-1/4 left-1/4 w-32 h-32 rounded-full bg-gradient-to-br from-pink-300/20 to-purple-300/20 blur-3xl float-x" style="z-index: 0; pointer-events: none;"></div>
+    <div class="fixed top-1/3 right-1/4 w-40 h-40 rounded-full bg-gradient-to-tr from-pink-200/15 to-purple-200/15 blur-3xl float-y" style="z-index: 0; pointer-events: none;"></div>
+    
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/918897977808" target="_blank" class="whatsapp-button animate-pulse">
+        <i class="fab fa-whatsapp"></i>
+        <div class="whatsapp-tooltip">WhatsApp: 8897977808</div>
+    </a>
+    
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 py-5 px-6 md:px-12 bg-white/70 backdrop-blur-xl border-b border-pink-200/30 shadow-lg">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="../index (2).html" class="flex items-center space-x-4 group cursor-pointer hover-wiggle">
+                <img src="https://raw.githubusercontent.com/cleansetoday/reelrascals/main/raas.png" alt="ReelRascals Logo" class="logo-img transition-transform duration-300 hover:scale-110" style="height: 75px; width: auto;">
+                <div>
+                    <h1 class="font-heading text-3xl font-black text-gray-900 tracking-tighter">
+                        Reel<span class="gradient-text">Rascals</span>
+                    </h1>
+                    <p class="font-body text-xs text-pink-600 -mt-1">
+                        Reels As A <span class="text-pink-500">Service</span>
+                    </p>
+                </div>
+            </a>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="../index (2).html#services" class="font-body text-gray-700 hover:text-pink-600 transition-colors duration-300 font-semibold">Services</a>
+                <a href="../index (2).html#portfolio" class="font-body text-gray-700 hover:text-pink-600 transition-colors duration-300 font-semibold">Portfolio</a>
+                <a href="../index (2).html#process" class="font-body text-gray-700 hover:text-pink-600 transition-colors duration-300 font-semibold">Process</a>
+                <a href="/faq/" class="font-body text-pink-600 hover:text-pink-700 transition-colors duration-300 font-bold border-b-2 border-pink-600">FAQ</a>
+                <a href="../index (2).html#contact" class="px-6 py-3 gradient-bg text-white rounded-full font-bold font-body hover:shadow-xl hover:scale-105 transition-all duration-300">
+                    Get Started
+                </a>
+            </div>
+            <button class="md:hidden text-gray-700 text-2xl" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden mt-4 pb-4 space-y-4">
+            <a href="../index (2).html#services" class="block font-body text-gray-700 hover:text-pink-600 transition-colors duration-300 font-semibold">Services</a>
+            <a href="../index (2).html#portfolio" class="block font-body text-gray-700 hover:text-pink-600 transition-colors duration-300 font-semibold">Portfolio</a>
+            <a href="../index (2).html#process" class="block font-body text-gray-700 hover:text-pink-600 transition-colors duration-300 font-semibold">Process</a>
+            <a href="/faq/" class="block font-body text-pink-600 hover:text-pink-700 transition-colors duration-300 font-bold">FAQ</a>
+            <a href="../index (2).html#contact" class="block px-6 py-3 gradient-bg text-white rounded-full font-bold font-body text-center hover:shadow-xl transition-all duration-300">
+                Get Started
+            </a>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="pt-48 pb-32 px-6 md:px-12 relative overflow-hidden z-10" style="background: linear-gradient(to bottom, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.75));">
+        <!-- Hero Background Elements -->
+        <div class="absolute top-0 left-0 w-full h-full z-0">
+            <div class="absolute top-20 right-1/4 w-64 h-64 rounded-full bg-gradient-to-r from-pink-300/20 to-purple-300/20 blur-3xl"></div>
+            <div class="absolute bottom-20 left-1/4 w-96 h-96 rounded-full bg-gradient-to-l from-pink-200/15 to-purple-200/15 blur-3xl"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="grid lg:grid-cols-2 gap-20 items-center">
+                <!-- Left Column -->
+                <div class="fade-in">
+                    <div class="inline-block px-6 py-3 rounded-full bg-gradient-to-r from-pink-100 to-purple-100 border-2 border-pink-300 mb-10 animate-bounce hover-wiggle">
+                        <span class="font-body text-pink-600 font-semibold text-sm uppercase tracking-wide">
+                            ❓ Got Questions? <span class="text-purple-600 font-bold">We've Got Answers</span>
+                        </span>
+                    </div>
+                    
+                    <h1 class="text-6xl md:text-8xl text-gray-900 leading-tight mb-10 animate-fade-down">
+                        <span class="block text-4xl md:text-5xl mb-3 text-gray-700 animate-slide-left">Your Guide to</span>
+                        <span class="gradient-text block mb-4 text-6xl md:text-8xl animate-gradient animate-slide-right">Instagram Reels</span>
+                        <span class="font-body block text-3xl md:text-4xl text-gray-700 mt-6 leading-snug animate-slide-up">
+                            Everything About <span class="text-pink-600 font-bold">Social Media</span><br>
+                            For Your <span class="text-purple-600 font-bold">Local Business</span>
+                        </span>
+                    </h1>
+                    
+                    <p class="font-body text-lg md:text-xl text-gray-600 mb-12 max-w-2xl leading-relaxed animate-fade-down stagger-2">
+                        Comprehensive answers about <span class="font-funky text-pink-600 font-bold">Instagram Reels</span>, our process, and how we help Bangalore businesses dominate their market. Learn how <span class="font-semibold">Reels As A Service</span> transforms your visibility.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-6">
+                        <a href="#faqs" class="font-funky px-12 py-6 gradient-bg rounded-full text-white font-bold text-xl flex items-center justify-center space-x-4 hover:shadow-2xl hover:scale-105 transition-all duration-300 button-pulse">
+                            <span>Read FAQs Below</span>
+                            <i class="fas fa-arrow-down"></i>
+                        </a>
+                        <a href="../index (2).html#contact" class="font-body px-12 py-6 rounded-full border-2 border-pink-400 text-pink-600 font-bold text-xl flex items-center justify-center space-x-4 hover:bg-pink-50 hover:scale-105 transition-all duration-300 hover:border-pink-600">
+                            <span>Get Started</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Right Column - Logo & Branding -->
+                <div class="relative">
+                    <div class="flex flex-col items-center justify-center space-y-8 animate-fade-in-up animate-delay-400">
+                        <!-- Logo Image -->
+                        <img src="https://raw.githubusercontent.com/cleansetoday/reelrascals/main/raas.png" alt="ReelRascals Logo" class="logo-img w-full max-w-md hover:scale-110 transition-transform duration-500">
+                        
+                        <!-- Brand Text -->
+                        <div class="text-center">
+                            <div class="font-heading text-5xl md:text-6xl font-black text-gray-900 tracking-tighter mb-2" style="font-size: 3.5rem;">
+                                Reel<span class="gradient-text">Rascals</span>
+                            </div>
+                            <p class="font-body text-lg md:text-xl text-pink-600 font-semibold">
+                                Reels As A <span class="text-purple-600">Service</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Main FAQ Section -->
+    <section id="faqs" class="py-20 px-6 md:px-12 relative overflow-hidden z-10" style="background: linear-gradient(to bottom, rgba(255, 255, 255, 0.75), rgba(252, 231, 243, 0.75));">
+        <div class="max-w-4xl mx-auto">
+            
+            <!-- Category: Understanding Instagram Reels -->
+            <div class="mb-16 animate-fade-in-up animate-delay-300">
+                <h2 class="font-heading mb-12 text-center text-5xl md:text-6xl">
+                    <span class="gradient-text">Understanding Instagram Reels</span>
+                </h2>
+                
+                <!-- FAQ Item -->
+                <div class="glass-card mb-6 overflow-hidden">
+                    <div class="faq-question p-6 flex justify-between items-center" onclick="toggleFAQ(this)">
+                        <h3 class="font-heading text-gray-800 pr-4">How do Instagram Reels actually work?</h3>
+                        <i class="fas fa-chevron-down text-pink-600 text-xl faq-icon"></i>
+                    </div>
+                    <div class="faq-answer px-6">
+                        <div class="pb-6 text-gray-700 font-body leading-relaxed">
+                            <p class="mb-4">Instagram Reels are short-form video content (up to 90 seconds) that leverage a powerful discovery algorithm. Unlike regular posts that primarily reach your existing followers, Reels are designed to be discovered by new audiences through:</p>
+                            <ul class="list-disc pl-6 space-y-2 mb-4">
+                                <li><strong>The Explore Page:</strong> Instagram actively pushes quality Reels to users who don't follow you but have shown interest in similar content</li>
+                                <li><strong>Engagement-Based Algorithm:</strong> The platform prioritizes Reels with high watch time, shares, saves, and comments</li>
+                                <li><strong>Trending Audio & Effects:</strong> Using popular sounds and effects increases your chances of being featured</li>
+                                <li><strong>Location Tags:</strong> Critical for local businesses—helps you reach people in your geographic area</li>
+                            </ul>
+                            <p>The algorithm favors authentic, entertaining content over polished ads. This is why raw, behind-the-scenes content often outperforms studio-quality productions.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item -->
+                <div class="glass-card mb-6 overflow-hidden">
+                    <div class="faq-question p-6 flex justify-between items-center" onclick="toggleFAQ(this)">
+                        <h3 class="font-heading text-gray-800 pr-4">Why are Reels so important for local businesses?</h3>
+                        <i class="fas fa-chevron-down text-pink-600 text-xl faq-icon"></i>
+                    </div>
+                    <div class="faq-answer px-6">
+                        <div class="pb-6 text-gray-700 font-body leading-relaxed">
+                            <p class="mb-4">Instagram Reels are currently <strong>the #1 organic medium</strong> for local businesses to drive actual sales and foot traffic. Here's why:</p>
+                            <ul class="list-disc pl-6 space-y-3 mb-4">
+                                <li><strong>Unmatched Organic Reach:</strong> While organic reach on Facebook and regular Instagram posts has declined dramatically, Reels still get 10-20x the reach of static posts</li>
+                                <li><strong>Local Discovery:</strong> People actively search for "cafes near me" or "best salon in [city]" on Instagram, and Reels with location tags appear in these searches</li>
+                                <li><strong>Cost-Effective:</strong> Unlike paid ads, organic Reels cost nothing but time and creativity—perfect for small businesses with limited budgets</li>
+                                <li><strong>Builds Trust Faster:</strong> Video shows the real personality of your business, your staff, and your environment—building trust before customers even visit</li>
+                                <li><strong>Drives Action:</strong> Reels with clear calls-to-action (visit our location, book now, call us) convert viewers into customers</li>
+                                <li><strong>Shareability:</strong> Good Reels get shared in DMs and Stories, creating word-of-mouth marketing on steroids</li>
+                            </ul>
+                            <p class="mb-4"><strong>Real Impact:</strong> We've seen local restaurants go from 20 walk-ins per week to 100+ after implementing a consistent Reels strategy. A local boutique increased monthly revenue by 340% in just 3 months using only organic Reels.</p>
+                            <p>The key is consistency and authenticity. Reels aren't just another marketing channel—they're <em>the</em> marketing channel for local businesses in 2024.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item -->
+                <div class="glass-card mb-6 overflow-hidden">
+                    <div class="faq-question p-6 flex justify-between items-center" onclick="toggleFAQ(this)">
+                        <h3 class="font-heading text-gray-800 pr-4">Can I track how many customers came from watching my Reels?</h3>
+                        <i class="fas fa-chevron-down text-pink-600 text-xl faq-icon"></i>
+                    </div>
+                    <div class="faq-answer px-6">
+                        <div class="pb-6 text-gray-700 font-body leading-relaxed">
+                            <p class="mb-4"><strong>Short answer:</strong> Not precisely with organic Reels, but you can track it with paid campaigns.</p>
+                            <p class="mb-4"><strong>For Organic Reels (Free Content):</strong></p>
+                            <ul class="list-disc pl-6 space-y-2 mb-4">
+                                <li>Instagram doesn't provide direct attribution—you can't see "5 people visited your store after watching this Reel"</li>
+                                <li>However, you CAN track indirect indicators: profile visits, website clicks, DM inquiries, and saves</li>
+                                <li>Many businesses ask new customers "How did you hear about us?" and track responses manually</li>
+                                <li>You can use unique promo codes in Reels (e.g., "Use code REEL20 for 20% off") to track conversions</li>
+                            </ul>
+                            <p class="mb-4"><strong>For Paid Campaigns (Promoted Reels):</strong></p>
+                            <ul class="list-disc pl-6 space-y-2 mb-4">
+                                <li>Facebook's Meta Pixel allows you to track conversions, store visits, and purchases</li>
+                                <li>You can set up conversion tracking for specific actions (calls, directions, bookings)</li>
+                                <li>Instagram provides detailed analytics on ad performance and attribution</li>
+                            </ul>
+                            <p class="mb-4"><strong>Our Approach:</strong> We help you implement a multi-touch attribution system:</p>
+                            <ul class="list-disc pl-6 space-y-2">
+                                <li>Custom UTM links for website traffic tracking</li>
+                                <li>Unique promo codes for different Reels</li>
+                                <li>Regular customer surveys (digital or in-person)</li>
+                                <li>Monitoring spikes in business activity after viral Reels</li>
+                                <li>Google My Business insights (searches and direction requests)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item -->
+                <div class="glass-card mb-6 overflow-hidden">
+                    <div class="faq-question p-6 flex justify-between items-center" onclick="toggleFAQ(this)">
+                        <h3 class="font-heading text-gray-800 pr-4">A Reel gets 1 million views but zero sales. Another gets 50k views but decent sales. Which is more successful and why?</h3>
+                        <i class="fas fa-chevron-down text-pink-600 text-xl faq-icon"></i>
+                    </div>
+                    <div class="faq-answer px-6">
+                        <div class="pb-6 text-gray-700 font-body leading-relaxed">
+                            <p class="mb-4"><strong>The 50k view Reel is FAR more successful.</strong> Here's why vanity metrics are misleading:</p>
+                            
+                            <h4 class="font-heading text-lg mb-3 mt-6">The Million-View Trap</h4>
+                            <p class="mb-4">High views with no sales typically indicate:</p>
+                            <ul class="list-disc pl-6 space-y-2 mb-4">
+                                <li><strong>Entertainment without Intent:</strong> The Reel was entertaining but didn't speak to your target audience. It went viral for being funny/shocking, but viewers had no intent to buy</li>
+                                <li><strong>Wrong Hook:</strong> The hook attracted the wrong demographic (e.g., a restaurant targeting millennials but the Reel went viral with Gen Z who don't live in the area)</li>
+                                <li><strong>No Clear CTA:</strong> People watched, enjoyed, but didn't know what action to take next</li>
+                                <li><strong>Geographic Mismatch:</strong> Went viral nationally/globally when you're a local business serving a specific area</li>
+                                <li><strong>Passive Engagement:</strong> High watch time but low saves, shares, or profile visits—people watched and moved on</li>
+                            </ul>
+                            
+                            <h4 class="font-heading text-lg mb-3 mt-6">The 50k Success Story</h4>
+                            <p class="mb-4">Lower views with sales indicate:</p>
+                            <ul class="list-disc pl-6 space-y-2 mb-4">
+                                <li><strong>Perfect Audience Match:</strong> Reached exactly the right people who need your service</li>
+                                <li><strong>Problem-Solution Hook:</strong> Started with a relatable problem your audience faces, then showed your business as the solution</li>
+                                <li><strong>Local Targeting:</strong> Used location tags and local references that resonated with nearby residents</li>
+                                <li><strong>Strong CTA:</strong> Clear call-to-action ("Visit us at [address]", "Book now via link in bio", "DM us for reservations")</li>
+                                <li><strong>Active Engagement:</strong> High save rate, shares to friends, profile visits, and DMs—all purchase intent signals</li>
+                                <li><strong>Social Proof:</strong> Featured customer testimonials, showed busy environment, or highlighted popular products</li>
+                            </ul>
+                            
+                            <h4 class="font-heading text-lg mb-3 mt-6">What Actually Matters</h4>
+                            <p class="mb-4">For local businesses, prioritize these metrics over views:</p>
+                            <ul class="list-disc pl-6 space-y-2 mb-4">
+                                <li><strong>Save Rate:</strong> People saving your Reel to watch later or reference = high purchase intent</li>
+                                <li><strong>Profile Visits:</strong> Shows people want to learn more about your business</li>
+                                <li><strong>Shares:</strong> Especially shares via DM = people recommending you to friends</li>
+                                <li><strong>Comments:</strong> Quality over quantity—"Where are you located?" is gold</li>
+                                <li><strong>Link Clicks:</strong> Direct indicator of conversion intent</li>
+                                <li><strong>New Followers from Non-Followers:</strong> Growing your local audience</li>
+                            </ul>
+                            
+                            <p class="mb-4"><strong>Example:</strong> We managed a local bakery. One Reel (cupcake decorating) got 800k views but zero sales. Another Reel (showing our limited-edition weekend box with a "DM to preorder" CTA) got 35k views but generated 47 orders worth $2,350 in revenue.</p>
+                            
+                            <p class="font-bold">Success = Revenue Per 1000 Views, not total views. A smaller, engaged local audience beats a massive disengaged audience every time.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Category: Our Process -->
+            <div class="mb-16 animate-fade-in-up animate-delay-400">
+                <h2 class="font-heading mb-12 text-center text-5xl md:text-6xl">
+                    <span class="gradient-text">How We Work With You</span>
+                </h2>
+                
+                <!-- FAQ Item -->
+                <div class="glass-card mb-6 overflow-hidden">
+                    <div class="faq-question p-6 flex justify-between items-center" onclick="toggleFAQ(this)">
+                        <h3 class="font-heading text-gray-800 pr-4">What happens during the initial audit?</h3>
+                        <i class="fas fa-chevron-down text-pink-600 text-xl faq-icon"></i>
+                    </div>
+                    <div class="faq-answer px-6">
+                        <div class="pb-6 text-gray-700 font-body leading-relaxed">
+                            <p class="mb-4">When we onboard a client, the <strong>first thing we do is conduct a comprehensive Instagram audit</strong>. This isn't a surface-level glance—it's a deep dive into what will actually work for your specific business.</p>
+                            
+                            <h4 class="font-heading text-lg mb-3 mt-4">If You Already Have an Instagram Account:</h4>
+                            <ul class="list-disc pl-6 space-y-2 mb-4">
+                                <li><strong>Content Performance Analysis:</strong> Which posts/Reels got the most engagement and why</li>
+                                <li><strong>Audience Demographics:</strong> Who's following you vs. who's engaging vs. who should be your customers</li>
+                                <li><strong>Posting Consistency:</strong> Are you posting regularly enough to stay top-of-mind?</li>
+                                <li><strong>Profile Optimization:</strong> Is your bio optimized? Contact info clear? Highlights organized?</li>
+                                <li><strong>Content Gaps:</strong> What type of content is missing that your audience wants to see?</li>
+                                <li><strong>Competitor Benchmarking:</strong> How you stack up against local competitors</li>
+                            </ul>
+                            
+                            <h4 class="font-heading text-lg mb-3 mt-4">If You Don't Have Instagram:</h4>
+                            <ul class="list-disc pl-6 space-y-2 mb-4">
+                                <li><strong>We propose setting up a professional account</strong> (Business or Creator account for analytics)</li>
+                                <li><strong>Competitor Research:</strong> We analyze how your direct competitors are performing—what's working, what's not</li>
+                                <li><strong>Market Gap Analysis:</strong> We identify opportunities they're missing that you can dominate</li>
+                                <li><strong>Content Strategy Blueprint:</strong> We create a plan before posting anything, so your first impression is strong</li>
+                                <li><strong>Profile Setup:</strong> Professional bio, branded highlights, contact methods, link in bio optimization</li>
+                            </ul>
+                            
+                            <p class="mb-4">We also audit your:</p>
+                            <ul class="list-disc pl-6 space-y-2">
+                                <li><strong>Website SEO:</strong> Is your site optimized for local search?</li>
+                                <li><strong>Local SEO:</strong> Are you appearing in "near me" searches?</li>
+                                <li><strong>Google My Business:</strong> Is your GMB profile complete, optimized, and actively managed?</li>
+                            </ul>
+                            
+                            <p class="mt-4">This audit typically takes 2-3 business days, and we present you with a detailed report and strategy before shooting a single Reel.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item -->
+                <div class="glass-card mb-6 overflow-hidden">
+                    <div class="faq-question p-6 flex justify-between items-center" onclick="toggleFAQ(this)">
+                        <h3 class="font-heading text-gray-800 pr-4">How do you create content? Do I need to do anything?</h3>
+                        <i class="fas fa-chevron-down text-pink-600 text-xl faq-icon"></i>
+                    </div>
+                    <div class="faq-answer px-6">
+                        <div class="pb-6 text-gray-700 font-body leading-relaxed">
+                            <p class="mb-4"><strong>We come to your location and handle everything.</strong> Here's our content creation process:</p>
+                            
+                            <h4 class="font-heading text-lg mb-3 mt-4">On-Location Shoot Days</h4>
+                            <ul class="list-disc pl-6 space-y-2 mb-4">
+                                <li>We schedule regular shoot days at your business (typically 2-4 times per month depending on your package)</li>
+                                <li>We bring professional equipment (phone gimbals, lighting if needed, microphones)</li>
+                                <li>We capture multiple Reels, behind-the-scenes content, and photos in one session</li>
+                                <li>We film during your peak hours to capture authentic energy and real customers (with permission)</li>
+                                <li>Average shoot: 2-3 hours = 15-20 pieces of content for the month</li>
+                            </ul>
+                            
+                            <h4 class="font-heading text-lg mb-3 mt-4">What We Need From You</h4>
+                            <ul class="list-disc pl-6 space-y-2 mb-4">
+                                <li><strong>Access:</strong> Permission to film in your space during business hours</li>
+                                <li><strong>Cooperation:</strong> Brief your team that we'll be filming (most employees love it!)</li>
+                                <li><strong>Input:</strong> Tell us about any special promotions, events, or products to highlight</li>
+                                <li><strong>Authenticity:</strong> Just keep doing what you do best—we'll capture it</li>
+                            </ul>
+                            
+                            <h4 class="font-heading text-lg mb-3 mt-4">Post-Production</h4>
+                            <ul class="list-disc pl-6 space-y-2 mb-4">
+                                <li>We edit all content with trending music, effects, and captions</li>
+                                <li>We write engaging captions with relevant hashtags and CTAs</li>
+                                <li>You get approval on all content before it goes live (via WhatsApp or email)</li>
+                                <li>We schedule posts for optimal times when your audience is most active</li>
+                            </ul>
+                            
+                            <p class="mt-4 font-bold">Your only job is to run your business. We handle the entire content creation, editing, and posting process.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item -->
+                <div class="glass-card mb-6 overflow-hidden">
+                    <div class="faq-question p-6 flex justify-between items-center" onclick="toggleFAQ(this)">
+                        <h3 class="font-heading text-gray-800 pr-4">What exactly do you post? How often?</h3>
+                        <i class="fas fa-chevron-down text-pink-600 text-xl faq-icon"></i>
+                    </div>
+                    <div class="faq-answer px-6">
+                        <div class="pb-6 text-gray-700 font-body leading-relaxed">
+                            <p class="mb-4"><strong>We take care of daily social media posting to keep your account active and your audience engaged.</strong></p>
+                            
+                            <h4 class="font-heading text-lg mb-3 mt-4">Our Posting Strategy</h4>
+                            <ul class="list-disc pl-6 space-y-3 mb-4">
+                                <li><strong>Reels (Priority #1):</strong> 3-5 Reels per week
+                                    <ul class="list-circle pl-6 mt-2 space-y-1">
+                                        <li>Behind-the-scenes content</li>
+                                        <li>Product/service showcases</li>
+                                        <li>Customer testimonials</li>
+                                        <li>Trending audio/challenges adapted to your business</li>
+                                        <li>Day-in-the-life content</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Carousels:</strong> 2-3 per week when we don't have fresh Reels
+                                    <ul class="list-circle pl-6 mt-2 space-y-1">
+                                        <li>Educational content (tips, tutorials)</li>
+                                        <li>Before/after transformations</li>
+                                        <li>Product catalogs</li>
+                                        <li>Customer reviews compilation</li>
+                                        <li>Menu/service highlights</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Single Image Posts:</strong> When needed to maintain daily consistency
+                                    <ul class="list-circle pl-6 mt-2 space-y-1">
+                                        <li>Quotes or testimonials</li>
+                                        <li>Announcements (hours, closures, events)</li>
+                                        <li>Product photos</li>
+                                        <li>Team spotlights</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Stories:</strong> 3-5 per day
+                                    <ul class="list-circle pl-6 mt-2 space-y-1">
+                                        <li>Daily updates</li>
+                                        <li>Behind-the-scenes moments</li>
+                                        <li>Polls and questions to boost engagement</li>
+                                        <li>Sharing user-generated content</li>
+                                        <li>Limited-time offers</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            
+                            <h4 class="font-heading text-lg mb-3 mt-4">Content Balance (The 80/20 Rule)</h4>
+                            <ul class="list-disc pl-6 space-y-2 mb-4">
+                                <li><strong>80% Value/Entertainment:</strong> Content that educates, entertains, or inspires your audience</li>
+                                <li><strong>20% Promotional:</strong> Direct sales messages, promotions, offers</li>
+                            </ul>
+                            
+                            <h4 class="font-heading text-lg mb-3 mt-4">Why Daily Posting Matters</h4>
+                            <p class="mb-4">Instagram's algorithm rewards consistency. Accounts that post daily:</p>
+                            <ul class="list-disc pl-6 space-y-2 mb-4">
+                                <li>Get better reach on all content (not just the current post)</li>
+                                <li>Stay top-of-mind with followers</li>
+                                <li>Build trust faster through regular presence</li>
+                                <li>Have more chances to appear in Explore and local searches</li>
+                            </ul>
+                            
+                            <p class="mt-4 font-bold">Our goal: Keep your account active, your audience engaged, and the algorithm happy—so your business stays visible 24/7.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item -->
+                <div class="glass-card mb-6 overflow-hidden">
+                    <div class="faq-question p-6 flex justify-between items-center" onclick="toggleFAQ(this)">
+                        <h3 class="font-heading text-gray-800 pr-4">Do you handle comments and DMs too?</h3>
+                        <i class="fas fa-chevron-down text-pink-600 text-xl faq-icon"></i>
+                    </div>
+                    <div class="faq-answer px-6">
+                        <div class="pb-6 text-gray-700 font-body leading-relaxed">
+                            <p class="mb-4"><strong>Yes! Community management is a critical part of our service.</strong></p>
+                            
+                            <h4 class="font-heading text-lg mb-3 mt-4">What We Handle</h4>
+                            <ul class="list-disc pl-6 space-y-2 mb-4">
+                                <li><strong>Comment Responses:</strong> We reply to comments within 1-2 hours during business hours to boost engagement</li>
+                                <li><strong>DM Management:</strong> We respond to general inquiries, FAQs, and booking requests</li>
+                                <li><strong>Important DMs Forwarding:</strong> Complex questions or specific service requests get forwarded to you immediately via WhatsApp</li>
+                                <li><strong>Engagement Boost:</strong> We engage with your followers' content (likes, comments) to build community relationships</li>
+                                <li><strong>Reputation Management:</strong> We monitor tags and mentions of your business and respond accordingly</li>
+                            </ul>
+                            
+                            <h4 class="font-heading text-lg mb-3 mt-4">Why This Matters</h4>
+                            <p class="mb-4">Instagram's algorithm prioritizes posts with active engagement in the first 60 minutes. By responding quickly to comments and DMs:</p>
+                            <ul class="list-disc pl-6 space-y-2">
+                                <li>Your Reels get pushed to more people</li>
+                                <li>Followers feel valued and stay engaged</li>
+                                <li>Potential customers get immediate answers = higher conversion rates</li>
+                                <li>Your account looks active and trustworthy</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Category: Strategy & Results -->
+            <div class="mb-16 animate-fade-in-up animate-delay-500">
+                <h2 class="font-heading mb-12 text-center text-5xl md:text-6xl">
+                    <span class="gradient-text">Strategy & Insights</span>
+                </h2>
+                
+                <!-- FAQ Item -->
+                <div class="glass-card mb-6 overflow-hidden">
+                    <div class="faq-question p-6 flex justify-between items-center" onclick="toggleFAQ(this)">
+                        <h3 class="font-heading text-gray-800 pr-4">What's the difference between Observation, Insight, and Findings?</h3>
+                        <i class="fas fa-chevron-down text-pink-600 text-xl faq-icon"></i>
+                    </div>
+                    <div class="faq-answer px-6">
+                        <div class="pb-6 text-gray-700 font-body leading-relaxed">
+                            <p class="mb-4">These terms are often used interchangeably, but in marketing analytics, they mean very different things. Understanding the difference helps us create better strategies for you.</p>
+                            
+                            <h4 class="font-heading text-lg mb-3 mt-4">Observation</h4>
+                            <p class="mb-3"><strong>Definition:</strong> Raw data or facts that you can see and measure directly. Pure, uninterpreted information.</p>
+                            <p class="mb-3"><strong>Examples:</strong></p>
+                            <ul class="list-disc pl-6 space-y-1 mb-4">
+                                <li>"This Reel got 45,000 views"</li>
+                                <li>"23 people visited your profile after seeing this post"</li>
+                                <li>"The video received 1,200 likes and 87 comments"</li>
+                                <li>"78% of viewers watched until the end"</li>
+                                <li>"Most comments ask 'Where is this located?'"</li>
+                            </ul>
+                            
+                            <h4 class="font-heading text-lg mb-3 mt-4">Findings</h4>
+                            <p class="mb-3"><strong>Definition:</strong> Patterns, trends, or correlations identified from analyzing multiple observations. Connecting the dots between data points.</p>
+                            <p class="mb-3"><strong>Examples:</strong></p>
+                            <ul class="list-disc pl-6 space-y-1 mb-4">
+                                <li>"Reels posted on Tuesday at 7 PM consistently get 3x more views than those posted on Monday mornings"</li>
+                                <li>"Behind-the-scenes content generates 45% more saves than product-focused Reels"</li>
+                                <li>"Reels featuring your staff get 2x more comments than those without"</li>
+                                <li>"Videos using trending audio in the first 24 hours of trending get 5x more reach"</li>
+                                <li>"Reels that show pricing upfront have a 60% higher conversion rate"</li>
+                            </ul>
+                            
+                            <h4 class="font-heading text-lg mb-3 mt-4">Insight</h4>
+                            <p class="mb-3"><strong>Definition:</strong> A deeper understanding of WHY the findings matter and HOW they should change your strategy. This answers "what does this mean for the business?" and "what should we do about it?"</p>
+                            <p class="mb-3"><strong>Examples:</strong></p>
+                            <ul class="list-disc pl-6 space-y-2 mb-4">
+                                <li>"Behind-the-scenes content generates more saves because customers want to verify authenticity before visiting. <em>Insight:</em> We should prioritize BTS Reels showing real kitchen operations, staff interactions, and product preparation—this builds trust faster than polished product shots."</li>
+                                <li>"People are asking 'Where is this located?' in 60% of comments. <em>Insight:</em> Our CTAs aren't clear enough. We need to add location stickers, verbal mentions of the address in every Reel, and put 'Visit us at [specific address]' in every caption."</li>
+                                <li>"Reels with staff faces get more engagement. <em>Insight:</em> Customers connect with people, not products. We should feature your team members regularly, maybe even create a 'meet the team' series, and encourage staff to respond to comments personally."</li>
+                                <li>"Tuesday 7 PM posts outperform Monday mornings 3x. <em>Insight:</em> Your target audience (working professionals) scrolls Instagram after dinner, not during Monday morning commutes. Shift all priority Reels to Tuesday-Thursday evenings."</li>
+                            </ul>
+                            
+                            <h4 class="font-heading text-lg mb-3 mt-4">How We Use This in Your Strategy</h4>
+                            <p class="mb-3">Every month, we provide you with:</p>
+                            <ul class="list-disc pl-6 space-y-2">
+                                <li><strong>Observations:</strong> The raw data from your account</li>
+                                <li><strong>Findings:</strong> Patterns we've identified in your performance</li>
+                                <li><strong>Insights:</strong> Actionable recommendations for the next month's content strategy</li>
+                            </ul>
+                            
+                            <p class="mt-4 font-bold">Example Flow:</p>
+                            <p class="mt-2 ml-6"><strong>Observation:</strong> "Reel #7 got 82k views, 1.4k saves, and 23 DM inquiries."</p>
+                            <p class="ml-6"><strong>Finding:</strong> "Reels that show the full customer experience (arrival → service → result) have 4x higher inquiry rates."</p>
+                            <p class="ml-6"><strong>Insight:</strong> "Customers need to visualize themselves in your space. Create a 'customer journey' Reel series that walks through the entire experience from a first-person perspective. This reduces buying friction and increases bookings."</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item -->
+                <div class="glass-card mb-6 overflow-hidden">
+                    <div class="faq-question p-6 flex justify-between items-center" onclick="toggleFAQ(this)">
+                        <h3 class="font-heading text-gray-800 pr-4">How long before I see results?</h3>
+                        <i class="fas fa-chevron-down text-pink-600 text-xl faq-icon"></i>
+                    </div>
+                    <div class="faq-answer px-6">
+                        <div class="pb-6 text-gray-700 font-body leading-relaxed">
+                            <p class="mb-4"><strong>Realistic Timeline:</strong></p>
+                            <ul class="list-disc pl-6 space-y-3 mb-4">
+                                <li><strong>Week 1-2:</strong> Setup, audit, and strategy development. First content shoots.</li>
+                                <li><strong>Week 3-4:</strong> Daily posting begins. You'll see immediate increases in profile visits and engagement.</li>
+                                <li><strong>Month 2:</strong> Algorithm starts recognizing your account as active. Reach increases 200-400%.</li>
+                                <li><strong>Month 3:</strong> Your best-performing content types are identified. First viral Reel likely happens.</li>
+                                <li><strong>Month 3-6:</strong> Consistent growth. Noticeable increase in foot traffic, inquiries, and sales.</li>
+                            </ul>
+                            <p class="mb-4"><strong>Important:</strong> Social media is not a one-time campaign—it's an ongoing presence. The businesses that see the best results are those who commit to at least 3-6 months of consistent content.</p>
+                            <p>Think of it like going to the gym: You won't see abs after one workout, but after 3 months of consistency, the transformation is undeniable.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item -->
+                <div class="glass-card mb-6 overflow-hidden">
+                    <div class="faq-question p-6 flex justify-between items-center" onclick="toggleFAQ(this)">
+                        <h3 class="font-heading text-gray-800 pr-4">What makes your service different from other social media agencies?</h3>
+                        <i class="fas fa-chevron-down text-pink-600 text-xl faq-icon"></i>
+                    </div>
+                    <div class="faq-answer px-6">
+                        <div class="pb-6 text-gray-700 font-body leading-relaxed">
+                            <p class="mb-4"><strong>We specialize exclusively in local businesses and Instagram Reels.</strong> Here's what sets us apart:</p>
+                            <ul class="list-disc pl-6 space-y-3 mb-4">
+                                <li><strong>We Come to You:</strong> Most agencies ask you to send them content. We physically come to your location and handle everything—you don't lift a finger.</li>
+                                <li><strong>Local SEO Integration:</strong> We don't just manage Instagram. We audit your website, Google My Business, and local SEO to ensure everything works together.</li>
+                                <li><strong>Data-Driven Creativity:</strong> We combine authentic, creative content with rigorous analytics to continuously improve performance.</li>
+                                <li><strong>Daily Management:</strong> We don't just post and ghost. We're active on your account daily—responding to comments, DMs, and engaging with your community.</li>
+                                <li><strong>Transparent Reporting:</strong> Monthly reports with observations, findings, and insights—you always know what's working and why.</li>
+                                <li><strong>No Fluff, Real Results:</strong> We focus on metrics that matter: foot traffic, inquiries, bookings, and sales—not just vanity metrics like followers.</li>
+                            </ul>
+                            <p class="font-bold">We're not just a social media agency—we're your local visibility partner.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Category: Getting Started -->
+            <div class="mb-16 animate-fade-in-up animate-delay-600">
+                <h2 class="font-heading mb-12 text-center text-5xl md:text-6xl">
+                    <span class="gradient-text">Getting Started</span>
+                </h2>
+                
+                <!-- FAQ Item -->
+                <div class="glass-card mb-6 overflow-hidden">
+                    <div class="faq-question p-6 flex justify-between items-center" onclick="toggleFAQ(this)">
+                        <h3 class="font-heading text-gray-800 pr-4">What types of businesses do you work with?</h3>
+                        <i class="fas fa-chevron-down text-pink-600 text-xl faq-icon"></i>
+                    </div>
+                    <div class="faq-answer px-6">
+                        <div class="pb-6 text-gray-700 font-body leading-relaxed">
+                            <p class="mb-4">We specialize in <strong>location-based local businesses</strong> that benefit from foot traffic and local awareness:</p>
+                            <ul class="list-disc pl-6 space-y-2 mb-4">
+                                <li>Restaurants, cafes, bars, and cloud kitchens</li>
+                                <li>Salons, spas, and beauty services</li>
+                                <li>Fitness studios, gyms, and yoga centers</li>
+                                <li>Retail stores and boutiques</li>
+                                <li>Hotels, resorts, and homestays</li>
+                                <li>Event venues and banquet halls</li>
+                                <li>Professional services (dentists, clinics, consultants)</li>
+                                <li>Home services (interior design, renovation, etc.)</li>
+                            </ul>
+                            <p class="mb-4"><strong>Ideal Client:</strong> Local businesses with a physical location or service area who want to attract more nearby customers through organic social media presence.</p>
+                            <p><strong>Not a Great Fit:</strong> E-commerce businesses selling globally, purely online services with no local component, or businesses uncomfortable with video content.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item -->
+                <div class="glass-card mb-6 overflow-hidden">
+                    <div class="faq-question p-6 flex justify-between items-center" onclick="toggleFAQ(this)">
+                        <h3 class="font-heading text-gray-800 pr-4">How much does it cost?</h3>
+                        <i class="fas fa-chevron-down text-pink-600 text-xl faq-icon"></i>
+                    </div>
+                    <div class="faq-answer px-6">
+                        <div class="pb-6 text-gray-700 font-body leading-relaxed">
+                            <p class="mb-4">Our pricing is customized based on your specific needs, location, and the amount of content required. However, here's a general breakdown:</p>
+                            <ul class="list-disc pl-6 space-y-2 mb-4">
+                                <li><strong>Starter Package:</strong> Best for small businesses just starting with social media</li>
+                                <li><strong>Growth Package:</strong> Ideal for established businesses wanting consistent growth</li>
+                                <li><strong>Premium Package:</strong> For businesses ready to dominate their local market</li>
+                            </ul>
+                            <p class="mb-4">All packages include:</p>
+                            <ul class="list-disc pl-6 space-y-1 mb-4">
+                                <li>Initial audit (Instagram, SEO, GMB)</li>
+                                <li>On-location content shoots</li>
+                                <li>Daily social media management</li>
+                                <li>Comment & DM responses</li>
+                                <li>Monthly analytics reports</li>
+                            </ul>
+                            <p class="font-bold">Contact us for a personalized quote. We'll assess your business and recommend the best package to achieve your goals.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item -->
+                <div class="glass-card mb-6 overflow-hidden">
+                    <div class="faq-question p-6 flex justify-between items-center" onclick="toggleFAQ(this)">
+                        <h3 class="font-heading text-gray-800 pr-4">What do I need to get started?</h3>
+                        <i class="fas fa-chevron-down text-pink-600 text-xl faq-icon"></i>
+                    </div>
+                    <div class="faq-answer px-6">
+                        <div class="pb-6 text-gray-700 font-body leading-relaxed">
+                            <p class="mb-4"><strong>Very little! We handle everything. You just need:</strong></p>
+                            <ul class="list-disc pl-6 space-y-2 mb-4">
+                                <li><strong>Instagram Account Access:</strong> Admin access to your business Instagram (we'll help you set it up if you don't have one)</li>
+                                <li><strong>Business Information:</strong> Basic details about your services, hours, location, and unique selling points</li>
+                                <li><strong>Shoot Access:</strong> Permission for us to visit your location 2-4 times a month to film</li>
+                                <li><strong>Communication Channel:</strong> WhatsApp or email for approvals and urgent questions</li>
+                            </ul>
+                            <p class="mb-4"><strong>Optional but helpful:</strong></p>
+                            <ul class="list-disc pl-6 space-y-1">
+                                <li>Your logo and brand colors (for graphics)</li>
+                                <li>Any existing promotional materials</li>
+                                <li>Access to Google My Business (for local SEO optimization)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item -->
+                <div class="glass-card mb-6 overflow-hidden">
+                    <div class="faq-question p-6 flex justify-between items-center" onclick="toggleFAQ(this)">
+                        <h3 class="font-heading text-gray-800 pr-4">Can I cancel anytime?</h3>
+                        <i class="fas fa-chevron-down text-pink-600 text-xl faq-icon"></i>
+                    </div>
+                    <div class="faq-answer px-6">
+                        <div class="pb-6 text-gray-700 font-body leading-relaxed">
+                            <p class="mb-4"><strong>We recommend a minimum 3-month commitment</strong> to see meaningful results, but we're flexible.</p>
+                            <ul class="list-disc pl-6 space-y-2 mb-4">
+                                <li>No long-term lock-in contracts</li>
+                                <li>30-day notice for cancellation</li>
+                                <li>All content we create belongs to you</li>
+                                <li>We'll hand over full account access if you decide to manage in-house</li>
+                            </ul>
+                            <p class="font-bold">Most clients who commit to 3 months end up staying for 12+ because they see real ROI.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- CTA Section -->
+            <div class="glass-card p-12 text-center animate-fade-in-up animate-delay-600">
+                <h2 class="font-heading mb-6 text-5xl md:text-6xl">
+                    <span class="gradient-text">Still Have Questions?</span>
+                </h2>
+                <p class="text-xl text-gray-600 font-body mb-8 max-w-2xl mx-auto">
+                    We'd love to chat about your business and show you exactly how Instagram Reels can drive real growth.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <a href="https://wa.me/918897977808" target="_blank" class="px-8 py-4 gradient-bg text-white rounded-full font-bold font-body hover:shadow-2xl hover:scale-105 transition-all duration-300 inline-flex items-center gap-2">
+                        <i class="fab fa-whatsapp text-2xl"></i>
+                        Chat on WhatsApp
+                    </a>
+                    <a href="../index (2).html#contact" class="px-8 py-4 bg-white border-2 border-pink-500 text-pink-600 rounded-full font-bold font-body hover:bg-pink-50 hover:scale-105 transition-all duration-300">
+                        Schedule a Call
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="py-20 px-6 md:px-12 border-t border-pink-200 relative overflow-hidden z-10" style="background: linear-gradient(to bottom, rgba(252, 231, 243, 0.75), rgba(255, 255, 255, 0.75));">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-3 gap-12 mb-12 text-center md:text-left">
+                <div class="flex flex-col items-center md:items-start">
+                    <img src="https://raw.githubusercontent.com/cleansetoday/reelrascals/main/raas.png" alt="ReelRascals Logo" class="logo-img mb-4" style="height: 110px;">
+                    <p class="text-gray-600 font-body">Making local businesses unforgettable through the power of Instagram Reels.</p>
+                </div>
+                <div>
+                    <h4 class="font-heading text-xl mb-4 text-gray-800">Quick Links</h4>
+                    <ul class="space-y-2 font-body">
+                        <li><a href="../index (2).html#services" class="text-gray-600 hover:text-pink-600 transition-colors duration-300">Services</a></li>
+                        <li><a href="../index (2).html#portfolio" class="text-gray-600 hover:text-pink-600 transition-colors duration-300">Portfolio</a></li>
+                        <li><a href="../index (2).html#process" class="text-gray-600 hover:text-pink-600 transition-colors duration-300">Our Process</a></li>
+                        <li><a href="/faq/" class="text-pink-600 hover:text-pink-700 transition-colors duration-300 font-bold">FAQ</a></li>
+                        <li><a href="../index (2).html#contact" class="text-gray-600 hover:text-pink-600 transition-colors duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-heading text-xl mb-4 text-gray-800">Get in Touch</h4>
+                    <ul class="space-y-2 font-body text-gray-600">
+                        <li class="flex items-center justify-center md:justify-start gap-2">
+                            <i class="fas fa-phone text-pink-600"></i>
+                            <a href="tel:+918897977808" class="hover:text-pink-600 transition-colors duration-300">+91 8897977808</a>
+                        </li>
+                        <li class="flex items-center justify-center md:justify-start gap-2">
+                            <i class="fab fa-whatsapp text-pink-600"></i>
+                            <a href="https://wa.me/918897977808" target="_blank" class="hover:text-pink-600 transition-colors duration-300">WhatsApp</a>
+                        </li>
+                        <li class="flex items-center justify-center md:justify-start gap-2">
+                            <i class="fab fa-instagram text-pink-600"></i>
+                            <span>@reelrascals</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center pt-8 border-t border-pink-200">
+                <p class="text-gray-600 font-body">&copy; 2024 ReelRascals. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Particle Animation
+        function createParticles() {
+            const container = document.getElementById('particles');
+            const particleCount = 30;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.width = Math.random() * 8 + 3 + 'px';
+                particle.style.height = particle.style.width;
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.top = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 20 + 's';
+                particle.style.animationDuration = (Math.random() * 20 + 15) + 's';
+                container.appendChild(particle);
+            }
+        }
+        
+        // FAQ Toggle
+        function toggleFAQ(element) {
+            const answer = element.nextElementSibling;
+            const icon = element.querySelector('.faq-icon');
+            const allAnswers = document.querySelectorAll('.faq-answer');
+            const allIcons = document.querySelectorAll('.faq-icon');
+            
+            // Close all other FAQs
+            allAnswers.forEach(item => {
+                if (item !== answer) {
+                    item.classList.remove('active');
+                }
+            });
+            
+            allIcons.forEach(item => {
+                if (item !== icon) {
+                    item.classList.remove('active');
+                }
+            });
+            
+            // Toggle current FAQ
+            answer.classList.toggle('active');
+            icon.classList.toggle('active');
+        }
+        
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+        
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#' && href.length > 1) {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                }
+            });
+        });
+        
+        // Initialize
+        window.addEventListener('load', () => {
+            createParticles();
+        });
+    </script>
+    
+</body>
+</html>
