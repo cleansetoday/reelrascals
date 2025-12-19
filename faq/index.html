@@ -6,8 +6,9 @@
     <title>FAQ - Instagram Reels for Local Businesses | ReelRascals</title>
     <meta name="description" content="Everything you need to know about Instagram Reels for local businesses. Learn how we help boost your visibility and drive real sales through strategic social media management.">
     
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Fonts
+         Headings: Aeonik Pro (add files to /fonts for automatic loading via @font-face)
+         Body: system sans-serif -->
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -19,6 +20,40 @@
     <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/cleansetoday/reelrascals/main/raas.png">
     
     <style>
+        :root {
+            --primary-pink: #ec4899;
+            --primary-purple: #d946ef;
+            --light-bg: #ffffff;
+            --light-bg-secondary: #fef3f2;
+            --text-dark: #1f2937;
+            --text-gray: #4b5563;
+            --font-heading: "Aeonik Pro", "AeonikPro", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+            --font-body: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+        }
+
+        /* Optional: self-host Aeonik Pro (recommended). Put files in /fonts */
+        @font-face {
+            font-family: "Aeonik Pro";
+            src: url("/fonts/AeonikPro-Regular.woff2") format("woff2");
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: "Aeonik Pro";
+            src: url("/fonts/AeonikPro-Medium.woff2") format("woff2");
+            font-weight: 500;
+            font-style: normal;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: "Aeonik Pro";
+            src: url("/fonts/AeonikPro-Bold.woff2") format("woff2");
+            font-weight: 700;
+            font-style: normal;
+            font-display: swap;
+        }
+
         /* Prevent subtle horizontal overflow that makes layouts look “shifted” on mobile (esp. Safari) */
         html, body {
             width: 100%;
@@ -32,17 +67,8 @@
             }
         }
 
-        :root {
-            --primary-pink: #ec4899;
-            --primary-purple: #d946ef;
-            --light-bg: #ffffff;
-            --light-bg-secondary: #fef3f2;
-            --text-dark: #1f2937;
-            --text-gray: #4b5563;
-        }
-        
         body {
-            font-family: 'Courier New', Courier, monospace;
+            font-family: var(--font-body);
             background: linear-gradient(135deg, #ffffff 0%, #fef3f2 50%, #fff5f7 100%);
             color: var(--text-dark);
             overflow-x: hidden;
@@ -60,7 +86,7 @@
         
         /* Proper Heading Hierarchy */
         h1, h2, h3, h4, h5, h6, .font-heading {
-            font-family: 'JetBrains Mono', monospace;
+            font-family: var(--font-heading);
             font-weight: 700;
             line-height: 1.2;
         }
@@ -98,12 +124,12 @@
         }
         
         .font-body {
-            font-family: 'Courier New', Courier, monospace;
+            font-family: var(--font-body);
             font-weight: 400;
         }
         
         .font-funky {
-            font-family: 'Courier New', Courier, monospace;
+            font-family: var(--font-heading);
             font-weight: 800;
             letter-spacing: -1px;
         }
@@ -309,10 +335,14 @@
             justify-content: center;
             color: white;
             font-size: 30px;
-            z-index: 1000;
+            z-index: 9999;
             box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
             transition: all 0.3s ease;
             text-decoration: none;
+            cursor: pointer;
+            pointer-events: auto;
+            touch-action: manipulation;
+            -webkit-tap-highlight-color: transparent;
         }
         
         .whatsapp-button:hover {
@@ -337,7 +367,8 @@
             visibility: hidden;
             transition: all 0.3s ease;
             font-size: 14px;
-            font-family: 'Courier New', Courier, monospace;
+            font-family: var(--font-body);
+            pointer-events: none;
         }
         
         /* Mobile Responsiveness */
@@ -590,7 +621,7 @@
     <div class="fixed top-1/3 right-1/4 w-40 h-40 rounded-full bg-gradient-to-tr from-pink-200/15 to-purple-200/15 blur-3xl float-y" style="z-index: 0; pointer-events: none;"></div>
     
     <!-- WhatsApp Button -->
-    <a href="https://wa.me/918897977808" target="_blank" class="whatsapp-button animate-pulse">
+    <a href="https://api.whatsapp.com/send?phone=918897977808" class="whatsapp-button animate-pulse" aria-label="Chat with ReelRascals on WhatsApp">
         <i class="fab fa-whatsapp"></i>
         <div class="whatsapp-tooltip">WhatsApp: 8897977808</div>
     </a>
